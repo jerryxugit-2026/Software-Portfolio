@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Portfolio | ZIYANG XU</title>
+<meta name="description" content="Four open-source tools by Ziyang Xu: a study app with a registered software copyright, a Chrome side panel for local AI agents, and two MCP servers that make agents safe around real files and real reviews.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root{--paper:#F9F9F7;--ink:#1A1A1A;--cobalt:#0047AB;--clay:#9A6A4F;--mist:#E8EAEF}
+*{box-sizing:border-box}html,body{width:100%;max-width:100%;overflow-x:hidden;scroll-behavior:smooth}body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif}h1,h2,h3{font-family:'Playfair Display',serif}
+.hero-section{min-height:96vh;background:radial-gradient(circle at 16% 20%,rgba(0,71,171,.24),transparent 30%),radial-gradient(circle at 84% 12%,rgba(154,106,79,.18),transparent 26%),linear-gradient(135deg,#101827 0%,#1c2a44 46%,#0f1c33 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;padding:7rem 1rem}
+.hero-kicker{letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.72);font-size:.75rem}
+.hero-title{font-size:clamp(3rem,7.6vw,7rem);line-height:.96;max-width:1100px;text-wrap:balance}
+.hero-author{font-size:clamp(1.15rem,2.1vw,1.7rem);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.86)}
+.hero-subtitle{max-width:880px;color:rgba(255,255,255,.82)}
+.section-padding{padding:clamp(4rem,8vw,6.25rem) clamp(1rem,6vw,10%)}
+.cobalt-text{color:var(--cobalt)}
+.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.78rem;font-weight:700}
+.body-text{font-size:1.05rem;line-height:1.9;color:#374151}
+.tool-shot{width:100%;border-radius:1rem;box-shadow:0 22px 55px rgba(15,23,42,.16);border:1px solid rgba(15,23,42,.08);background:#fff}
+.shot-caption{font-size:.86rem;color:#666;margin-top:.85rem;font-style:italic;line-height:1.55}
+.pill{display:inline-flex;align-items:center;gap:.45rem;border:1px solid rgba(0,71,171,.25);color:var(--cobalt);background:rgba(0,71,171,.06);border-radius:999px;padding:.35rem .85rem;font-size:.78rem;font-weight:600;margin:.25rem .35rem .25rem 0}
+.principle-card{background:#fff;border:1px solid rgba(15,23,42,.08);border-radius:1.15rem;padding:1.6rem;box-shadow:0 14px 36px rgba(15,23,42,.06)}
+.principle-card h3{font-size:1.35rem;margin-bottom:.55rem}
+.measure{background:linear-gradient(180deg,#fff,#f4f7fc);border:1px solid rgba(0,71,171,.16);border-radius:1.15rem;overflow:hidden;box-shadow:0 20px 46px rgba(15,23,42,.10)}
+.measure table{width:100%;border-collapse:collapse;font-size:.92rem}
+.measure th,.measure td{padding:.85rem 1.1rem;text-align:left;border-bottom:1px solid rgba(15,23,42,.08)}
+.measure th{background:rgba(0,71,171,.07);font-weight:700;color:#0f2f71}
+.measure td:first-child{color:#475569}
+.measure .good{color:#0f7a3d;font-weight:700}
+.measure .bad{color:#b4530f;font-weight:600}
+.btn-row{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.55rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .25s ease,background .25s ease}
+.btn-primary{background:var(--cobalt);color:#fff}
+.btn-primary:hover{background:#003a8c;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(0,71,171,.35);color:var(--cobalt)}
+.btn-ghost:hover{background:rgba(0,71,171,.08);transform:translateY(-2px)}
+.counter{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.05}
+.counter-cap{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#6B7280;margin-top:.5rem}
+</style>
+</head>
+<body>
+
+<header class="hero-section">
+  <p class="hero-kicker mb-5" data-aos="fade-down">Software Portfolio · 2024–2026</p>
+  <h1 class="hero-title font-bold mb-6" data-aos="fade-down" data-aos-duration="1500">Tools I Build</h1>
+  <p class="hero-author mb-8" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="250">ZIYANG XU</p>
+  <p class="hero-subtitle text-lg md:text-2xl leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="420">Four open-source tools — a study app with a registered software copyright, a Chrome side panel that hands the page to a local AI agent, and two MCP servers that stop agents from wrecking spreadsheets and make several models argue before anything counts.</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 border-t border-b border-white/30 py-6 px-4 md:px-12 max-w-full" data-aos="zoom-in" data-aos-delay="600">
+    <div><span class="block text-3xl font-bold">4</span><span class="text-xs uppercase tracking-widest">Open-source tools</span></div>
+    <div><span class="block text-3xl font-bold">2</span><span class="text-xs uppercase tracking-widest">MCP servers</span></div>
+    <div><span class="block text-3xl font-bold">381</span><span class="text-xs uppercase tracking-widest">Automated tests</span></div>
+    <div><span class="block text-3xl font-bold">0</span><span class="text-xs uppercase tracking-widest">Accounts required</span></div>
+  </div>
+</header>
+
+<section class="section-padding bg-white" id="method">
+  <div class="max-w-6xl mx-auto">
+    <p class="uppercase tracking-[0.24em] text-xs cobalt-text font-bold mb-4" data-aos="fade-up">The method</p>
+    <h2 class="text-4xl md:text-5xl mb-10 cobalt-text" data-aos="fade-right">I build the measuring instrument first</h2>
+    <p class="body-text max-w-4xl mb-12" data-aos="fade-up">Before arguing about what AI agents should be allowed to do, I build the layer that makes their work inspectable: a preview before a write, a sandbox before a verdict, a measurement instead of a claim. Three rules run through all four tools:</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="principle-card" data-aos="fade-up"><h3 class="cobalt-text">Local first</h3><p class="body-text text-base">Your data never leaves your machine. The study app runs entirely in the browser, the side-panel agent runs on your own computer, and the review panel is sandboxed away from your disk.</p></div>
+      <div class="principle-card" data-aos="fade-up" data-aos-delay="90"><h3 class="cobalt-text">A safety layer, not a promise</h3><p class="body-text text-base">Agents are powerful and clumsy around real files. Every tool puts structure between intent and file: shadow models, targeted saves, delivery gates, blind review with evidence.</p></div>
+      <div class="principle-card" data-aos="fade-up" data-aos-delay="180"><h3 class="cobalt-text">Measure, don't assert</h3><p class="body-text text-base">When something broke, I instrumented it: 17.8× token amplification, 130-line citation drift, a 53-second failure — each found, fixed, and re-measured on a real audit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="vocab-master">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <p class="eyebrow cobalt-text mb-4">01 · Study tool · registered software copyright</p>
+      <h2 class="text-4xl md:text-5xl mb-6">Ziyang Vocab Master</h2>
+      <p class="body-text">Study the words you actually meet, not someone else's list. Drop in your own textbook or exam-paper PDF: the extractor pulls candidate vocabulary and filters the noise, an AI factory enriches each word with IPA, definitions, roots, collocations and an image cue, and spaced-repetition flashcards drill it four ways — association, context, spelling and pronunciation.</p>
+      <div class="mt-4">
+        <span class="pill">Browser-only · no server</span><span class="pill">Free · no accounts · no paywall</span><span class="pill">软件著作权 registered</span><span class="pill">Built in 2024, for my own studying</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://jerryxugit-2026.github.io/Build-Vocab-Master/Ziyang_Vocab_Master.html" target="_blank" rel="noopener">▶ Use it live</a>
+        <a class="btn btn-ghost" href="https://github.com/jerryxugit-2026/Build-Vocab-Master" target="_blank" rel="noopener">Source on GitHub</a>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <img class="tool-shot" src="assets/vocab-master.png" alt="Ziyang Vocab Master: the three-step workflow — PDF extractor, AI word factory, flashcards" loading="lazy">
+      <p class="shot-caption">The real interface: three steps — extract vocabulary from your own PDF, let the AI word factory enrich it, then drill it with spaced repetition.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding bg-white" id="companion">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-left">
+      <img class="tool-shot" src="assets/panel.png" alt="DSH Browser Companion side panel with the four buttons: attach page, attach selection, browser control, write actions" loading="lazy">
+      <p class="shot-caption">The Chrome side panel: attach the page, a selection, or a screenshot — then let the agent read it, or work it one confirmed action at a time.</p>
+    </div>
+    <div data-aos="fade-right">
+      <p class="eyebrow cobalt-text mb-4">02 · Chrome extension · local AI agent</p>
+      <h2 class="text-4xl md:text-5xl mb-6">DSH Browser Companion</h2>
+      <p class="body-text">An AI agent that sits next to the page you are reading. It reads the page for you — and when you turn that on, it works the page too: fills forms, translates while keeping the layout, summarises long documents, and collects the same thing across tabs. It runs on your own computer through DeepSeek Harness; nothing is sent to a third-party browser service.</p>
+      <div class="mt-4">
+        <span class="pill">Chrome side panel</span><span class="pill">Runs locally</span><span class="pill">One confirmation at a time</span><span class="pill">3-step install · Node 22+</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/jerryxugit-2026/dsh-web-companion" target="_blank" rel="noopener">Install guide &amp; source</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="sheet-shadow">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <p class="eyebrow cobalt-text mb-4">03 · MCP server · Go-native</p>
+      <h2 class="text-4xl md:text-5xl mb-6">Sheet Shadow</h2>
+      <p class="body-text">An agent asked to edit a real workbook will happily rewrite the whole file. Sheet Shadow gives it a shadow model instead: inspect the workbook, preview the impact, apply semantic operations, then write only the touched parts into a new copy — with a delivery gate that scans for formula errors, package drift and macro changes before handoff.</p>
+      <div class="mt-4">
+        <span class="pill">Go MCP server + workbook core</span><span class="pill">Preview before write</span><span class="pill">Targeted save, never in-place</span><span class="pill">Real MCP acceptance tests on real .xlsx</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/sheet_shadow" target="_blank" rel="noopener">Docs &amp; source</a>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <img class="tool-shot" src="assets/sheet-shadow-principle.svg" alt="Sheet Shadow principle: shadow model, preview, semantic operations, targeted save" loading="lazy">
+      <p class="shot-caption">How it works: the agent edits a shadow model first; the original workbook package is only patched where Sheet Shadow intentionally changed something.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding bg-white" id="pimoa">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-left">
+      <div class="measure">
+        <table>
+          <thead><tr><th>On a real 1004-line audit</th><th>PiMoa v1</th><th>PiMoa v2</th></tr></thead>
+          <tbody>
+            <tr><td>Outcome</td><td class="bad">failed, empty answer</td><td class="good">completed</td></tr>
+            <tr><td>Wall time</td><td class="bad">53.2 s wasted</td><td class="good">22.7 s</td></tr>
+            <tr><td>Input tokens</td><td class="bad">251,808</td><td class="good">~27,000</td></tr>
+            <tr><td>Cited line numbers</td><td class="bad">off by 130 lines</td><td class="good">exact</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="shot-caption">Measured, not asserted: v1 failed on real modules. The v2 investigation found each cause — 17.8× token amplification, bare-code line counting, one slow model emitting 10,902 characters — and fixed them one by one.</p>
+    </div>
+    <div data-aos="fade-right">
+      <p class="eyebrow cobalt-text mb-4">04 · MCP server · mixture of agents</p>
+      <h2 class="text-4xl md:text-5xl mb-6">PiMoa</h2>
+      <p class="body-text">Give your coding agent a review panel: several models answer in blind parallel, one model synthesizes the verdict, and none of them can touch your disk. The server scouts the task boundary mechanically before any model starts, feeds code with real line numbers, and keeps verification strictly fail-closed.</p>
+      <div class="mt-4">
+        <span class="pill">TypeScript / Node ≥ 22</span><span class="pill">381 automated tests</span><span class="pill">macOS sandbox</span><span class="pill">Evidence before verdict</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/PiMoa" target="_blank" rel="noopener">Docs &amp; source</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" id="common">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="uppercase tracking-[0.24em] text-xs cobalt-text font-bold mb-4" data-aos="fade-up">One pattern</p>
+    <h2 class="text-4xl md:text-5xl mb-8" data-aos="fade-up">Four tools, one habit of mind</h2>
+    <p class="text-xl leading-relaxed text-gray-700 italic" data-aos="fade-up">“Every one of them started with the same question: what would it take to trust this with something real — my own words, my own workbook, my own code review? The answer is never a bigger model. It is a layer that shows its work.”</p>
+    <div class="btn-row justify-center" data-aos="fade-up">
+      <a class="btn btn-primary" href="https://github.com/jerryxugit-2026" target="_blank" rel="noopener">All source on GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa" target="_blank" rel="noopener">The two MCP servers</a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-12 px-10 bg-white border-t border-black/5 text-gray-400 text-xs">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+    <div>
+      <p class="text-gray-600 font-semibold">Software Portfolio · ZIYANG XU</p>
+      <p class="mt-2">Ziyang Vocab Master · DSH Browser Companion · Sheet Shadow · PiMoa — all open source, all built between 2024 and 2026.</p>
+    </div>
+    <div>
+      <p class="uppercase font-bold mb-2 text-gray-600">Projects</p>
+      <p><a class="underline underline-offset-2 hover:text-gray-700" href="https://github.com/jerryxugit-2026/Build-Vocab-Master">Build-Vocab-Master</a> · <a class="underline underline-offset-2 hover:text-gray-700" href="https://github.com/jerryxugit-2026/dsh-web-companion">dsh-web-companion</a> · <a class="underline underline-offset-2 hover:text-gray-700" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa">Build-Agent-Tools-PiMoa</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:800,once:true,offset:100});</script>
+</body>
+</html>
