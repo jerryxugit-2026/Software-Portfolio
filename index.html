@@ -95,22 +95,63 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
   .rev{font-size:13.5px}.rev .date{white-space:normal}.rev td{word-break:break-word}
   .strip{gap:6px 16px}
 }
+
+body{font-size:18.5px;line-height:1.85}
+.frame{padding:88px 0 80px}
+.topnav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px 0 0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.topnav a{border:none;color:var(--ink)}.topnav a:hover{color:var(--accent)}
+.topnav span{color:var(--muted);font-weight:600}
+.page .frame{border-top:3px solid var(--ink);margin-top:26px}
+.cols{display:block}
+.story{max-width:720px}
+.story p{margin:0 0 26px}
+.story h3{margin:60px 0 12px}
+.story ul{margin-bottom:26px}.story li{margin-bottom:12px}
+.pull{margin:60px 0;max-width:780px}
+.sheet .sub{margin-bottom:68px;max-width:760px}
+.cols>div:last-child{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;align-items:start;margin-top:88px;padding-top:44px;border-top:1px solid var(--line)}
+.cols>div:last-child figure{margin-top:0}
+.rev{margin-top:96px}
+.fig-wide{margin-top:88px}
+.btns{margin-top:40px}
+.made-list li{padding:20px 0}
+.lede{margin-bottom:64px}
+.numbers{margin-top:64px;gap:36px}
+.numbers span{line-height:1.6}
+.cover .tblock{margin-top:24px}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:3px solid var(--ink);padding:34px 0 10px;margin-top:20px}
+.pager a{border:none;color:var(--ink);display:block}
+.pager a small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:6px}
+.pager a b{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.15}
+.pager a:hover b{color:var(--accent)}
+.pager .next{text-align:right;grid-column:2}
+.pagelist{font-size:13px;color:var(--muted);letter-spacing:.06em}
+.pagelist a{border:none;color:var(--muted);margin-right:14px}.pagelist a:hover{color:var(--accent)}
+.pagelist a.on{color:var(--ink);font-weight:700}
+.toc-more{margin-top:56px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+@media (max-width:900px){
+  .cols>div:last-child{grid-template-columns:1fr;gap:40px}
+  .pager{grid-template-columns:1fr}.pager .next{grid-column:1;text-align:left}
+}
 </style>
+<script>
+(function(){var m={"#made-for-me":"me.html","#made-for-mum":"mum.html","#made-for-truth":"truth.html","#made-for-the-daily-job":"daily-job.html","#made-for-everyone":"everyone.html","#notes":"notes.html"};
+var t=m[location.hash]; if(t){location.replace(t);}})();
+</script>
 </head>
 <body>
 <div class="wrap">
-
 <header class="frame cover" id="top">
   <div class="strip"><span><b>Software</b> · a portfolio in five stories</span><span>2024 – 2026</span><span>Ziyang Xu</span></div>
   <div class="pad">
     <p class="kicker">Five pieces of software, each made for someone</p>
     <h1>Made for <em>…</em></h1>
     <ol class="made-list">
-      <li><span class="no">01</span><a href="#made-for-me" class="for">myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
-      <li><span class="no">02</span><a href="#made-for-mum" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
-      <li><span class="no">03</span><a href="#made-for-truth" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
-      <li><span class="no">04</span><a href="#made-for-the-daily-job" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
-      <li><span class="no">05</span><a href="#made-for-everyone" class="for">everyone and everywhere <span>— where the tools live, even inside WeChat</span></a><span class="what">gateway · cloud · WeChat</span></li>
+      <li><span class="no">01</span><a href="me.html" class="for">myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
+      <li><span class="no">02</span><a href="mum.html" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
+      <li><span class="no">03</span><a href="truth.html" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
+      <li><span class="no">04</span><a href="daily-job.html" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
+      <li><span class="no">05</span><a href="everyone.html" class="for">everyone and everywhere <span>— where the tools live, even inside WeChat</span></a><span class="what">gateway · cloud · WeChat</span></li>
     </ol>
     <p class="lede">Every piece of software here started with someone who needed it. First it was me and my buddies. Then my mum. Then I needed AI to stop telling me confident lies, to do real work without breaking things, and to be reachable from anywhere. Each chapter tells one of those stories — with the measurements, the failures, and the things I deleted.</p>
     <div class="tblock">
@@ -121,335 +162,21 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
       <div class="full"><span class="k">Note</span>Every account, key and password in the published source is a mock. Real credentials never leave my machine.</div>
     </div>
     <div class="numbers">
-      <a href="#made-for-me"><b>®</b><span>a registered software copyright for the study tool</span><em>No. 01 →</em></a>
-      <a href="#made-for-mum"><b>3 steps</b><span>to install the browser assistant — no programming needed</span><em>No. 02 →</em></a>
-      <a href="#made-for-truth"><b>96.1 %</b><span>how often the AI judge is right when it says it is 99 % sure</span><em>No. 03 →</em></a>
-      <a href="#made-for-the-daily-job"><b>145</b><span>ready-made connectors that let the AI agent pull data from websites</span><em>No. 04 →</em></a>
-      <a href="#made-for-everyone"><b>347</b><span>abilities — calendar, mail, files, notes — shared by 10 AI assistants</span><em>No. 05 →</em></a>
+      <a href="me.html"><b>®</b><span>a registered software copyright for the study tool</span></a>
+      <a href="mum.html"><b>3 steps</b><span>to install the browser assistant — no programming needed</span></a>
+      <a href="truth.html"><b>96.1 %</b><span>how often the AI judge is right when it says it is 99 % sure</span></a>
+      <a href="daily-job.html"><b>145</b><span>ready-made connectors that let the AI agent pull data from websites</span></a>
+      <a href="everyone.html"><b>347</b><span>abilities — calendar, mail, files, notes — shared by 10 AI assistants</span></a>
     </div>
   </div>
+  <p class="toc-more"><a href="me.html">Start reading → Made for myself and my buddies</a></p>
 </header>
-
-<section class="frame sheet" id="made-for-me">
-  <div class="strip"><span><b>No. 01</b> / 05</span><span>Made for myself and my buddies</span><span>2024</span></div>
-  <div class="pad">
-    <p class="made">Made for myself and my buddies</p>
-    <h2>The list nobody made for me</h2>
-    <p class="sub">Ziyang Vocab Master — your own PDF becomes your own study deck.</p>
-    <div class="cols">
-      <div class="story">
-        <p>In 10th grade, the words I actually had to learn were sitting in my own textbooks and past exam papers. Every vocabulary app I tried wanted me to study <em>its</em> list instead.</p>
-        <p>So I built one that starts from my PDF. Drop in a textbook or an exam paper: the extractor pulls out the vocabulary and filters out the common-word noise; an AI “word factory” adds pronunciation, definitions, word roots, collocations and an image cue; and spaced-repetition flashcards drill every word four ways — association, context, spelling, and saying it out loud.</p>
-        <p>It runs entirely in the browser: no server, no account, no tracking. The deck you build stays on your machine.</p>
-        <p class="pull">One rule I kept from day one: a good tool for learning should not be hidden behind a paywall.</p>
-        <p>I built it for myself, then made it free so my buddies — and any student — could use it too. It holds a registered software copyright (软件著作权).</p>
-        <div class="btns"><a class="btn primary" href="https://jerryxugit-2026.github.io/Build-Vocab-Master/Ziyang_Vocab_Master.html" target="_blank" rel="noopener">▶ Use it live</a><a class="btn" href="https://github.com/jerryxugit-2026/Build-Vocab-Master" target="_blank" rel="noopener">Source</a></div>
-      </div>
-      <div>
-        <div class="spec"><div class="h">Specification</div><dl>
-          <div class="row"><dt>Built</dt><dd>2024, for my own studying</dd></div>
-          <div class="row"><dt>For</dt><dd>me, my buddies, and any student who learns from their own materials</dd></div>
-          <div class="row"><dt>Stack</dt><dd>HTML + JavaScript in the browser; Gemini API with your own free key; Pexels image cues</dd></div>
-          <div class="row"><dt>Data</dt><dd>stays on your machine — no server, no account</dd></div>
-          <div class="row"><dt>Cost</dt><dd>free</dd></div>
-          <div class="row"><dt>Status</dt><dd>registered software copyright</dd></div>
-        </dl></div>
-        <figure><img src="assets/vocab-master.png" alt="Ziyang Vocab Master interface: PDF extractor, AI word factory, flashcard quiz" loading="lazy"><figcaption><b>FIG 01.1</b> — The real interface: three steps, from your PDF to a quiz.</figcaption></figure>
-      </div>
-    </div>
-    <div class="sheetblock"><div><span class="k">Project</span>Ziyang Vocab Master</div><div><span class="k">Made for</span>myself &amp; my buddies</div><div><span class="k">Date</span>2024</div><div><span class="k">Sheet</span>01 / 05</div></div>
-  </div>
-</section>
-
-<section class="frame sheet" id="made-for-mum">
-  <div class="strip"><span><b>No. 02</b> / 05</span><span>Made for Mum</span><span>2026</span></div>
-  <div class="pad">
-    <p class="made">Made for Mum</p>
-    <h2>My mum couldn’t use it</h2>
-    <p class="sub">DSH Browser Companion — an AI assistant that sits next to the page you are reading.</p>
-    <div class="cols">
-      <div class="story">
-        <p>I loved a ChatGPT extension that sits beside the web page you are reading. It filled in forms, translated pages, summarised fifty-page documents. Then I tried to set it up for my mum — and she couldn’t use it. In China, the ChatGPT and Gemini browser extensions simply don’t work for her.</p>
-        <p>DeepSeek does work in China, and it is very good. But DeepSeek’s agent had no browser extension. So I built one, and I made every design decision with one user in mind:</p>
-        <ul>
-          <li><strong>Her pages stay at home.</strong> The agent runs on our own computer; nothing is sent to a third-party browser service.</li>
-          <li><strong>It asks before it acts.</strong> Reading is free. Clicking, typing and submitting happen one confirmation at a time.</li>
-          <li><strong>She will never open a compiler.</strong> Installation is three steps — download, run two commands, load the extension — and the setup wizard asks before every change.</li>
-        </ul>
-        <p>Now it reads a whole page, a selection, or a screenshot; and when it is allowed to, it fills forms, translates while keeping the layout, and collects the same information across several tabs.</p>
-        <p class="pull">The experience I loved, made usable by the people around me.</p>
-        <div class="btns"><a class="btn primary" href="https://github.com/jerryxugit-2026/dsh-web-companion" target="_blank" rel="noopener">Install guide &amp; source</a></div>
-      </div>
-      <div>
-        <div class="spec"><div class="h">Specification</div><dl>
-          <div class="row"><dt>Built</dt><dd>2026</dd></div>
-          <div class="row"><dt>For</dt><dd>my mum, and anyone who can’t use ChatGPT or Gemini extensions</dd></div>
-          <div class="row"><dt>Form</dt><dd>Chrome side-panel extension + a local agent (DeepSeek Harness)</dd></div>
-          <div class="row"><dt>Install</dt><dd>3 steps · Node 22+ · no compiler</dd></div>
-          <div class="row"><dt>Privacy</dt><dd>runs locally; no third-party browser service</dd></div>
-          <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
-        </dl></div>
-        <figure><img src="assets/panel.png" alt="DSH Browser Companion side panel with buttons to attach the page, attach a selection, enable browser control and enable write actions" loading="lazy"><figcaption><b>FIG 02.1</b> — The side panel. Write actions sit behind their own switch.</figcaption></figure>
-      </div>
-    </div>
-    <table class="rev dn"><caption>Design notes — requirement → decision</caption>
-      <tr><th>Requirement</th><th>Decision</th></tr>
-      <tr><td>Works in China</td><td>Built on DeepSeek, not on ChatGPT or Gemini</td></tr>
-      <tr><td>Her pages stay private</td><td>The agent runs on our own computer</td></tr>
-      <tr><td>No surprises</td><td>Every write action needs one confirmation</td></tr>
-      <tr><td>No developer tools</td><td>A three-step wizard; it even builds the extension itself</td></tr>
-    </table>
-    <div class="sheetblock"><div><span class="k">Project</span>DSH Browser Companion</div><div><span class="k">Made for</span>Mum</div><div><span class="k">Date</span>2026</div><div><span class="k">Sheet</span>02 / 05</div></div>
-  </div>
-</section>
-
-<section class="frame sheet" id="made-for-truth">
-  <div class="strip"><span><b>No. 03</b> / 05</span><span>Made for truth</span><span>2025 – 2026</span></div>
-  <div class="pad">
-    <p class="made">Made for truth</p>
-    <h2>The model that said “looks fine”</h2>
-    <p class="sub">PiMoa — several AI models review the same work blind. JEV — a judge that knows how sure it is.</p>
-    <div class="cols">
-      <div class="story">
-        <h3>Act 1 · one confident answer</h3>
-        <p>An AI model reviewed my code and said it looked fine. It was wrong, and it sounded completely sure. That was the lesson: one model’s confidence is not evidence.</p>
-        <h3>Act 2 · ask several, blind</h3>
-        <p>PiMoa sends the same question to several models at once. They cannot see each other’s answers, and a final model weighs them. They work inside a read-only sandbox — no internet, no writing to disk, their keys removed — and every claim has to come with a file and a line number. <span class="stamp">FAILED</span> Version 1 broke on real code: after minutes of work it returned an empty answer.</p>
-        <h3>Act 3 · measure, don’t guess</h3>
-        <p>I did not just raise the timeout. I measured. A 14,000-token task had grown to 251,808 tokens, because every step re-sent the whole conversation. Cited line numbers were off by 130, because the models were <em>counting</em> lines — so PiMoa now prints the real line numbers beside the code, and the models copy them. One model wrote 10,902 characters where the others wrote about 500, so its output is capped. On the same real 1,004-line review, version 2 finished in 22.7 seconds and every cited line number was exact.</p>
-        <h3>Act 4 · a panel can be wrong together</h3>
-        <p>So I added JEV: a judge that answers only closed questions, with a probability. I measured that probability too. Across 212 real judgments, when JEV said it was at least 0.99 sure, it was right 96.1 % of the time; when it said 0.5 – 0.7, only 33.3 %. The rule follows from the data: <strong>below 0.7, a human looks.</strong> Its blind spots are written on its first page — dates, counting and multi-step reasoning are weak, and given an image it confidently invents an answer, so it refuses images.</p>
-        <h3>Act 5 · keep what works, delete what doesn’t</h3>
-        <p>Its first real job: 3,660 lines of code, five rounds — 10 major and 32 minor problems found, and 7 false alarms (4 of them fake “blockers”) thrown out before they reached me. Then, in October, the numbers showed that an automatic “close the case” step I had designed was not worth what it cost. <span class="stamp">DELETED</span> I removed it and wrote down why.</p>
-        <p class="pull">An answer is worth what its evidence is worth.</p>
-        <div class="btns"><a class="btn primary" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/PiMoa" target="_blank" rel="noopener">PiMoa source</a><a class="btn primary" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/jev-mcp" target="_blank" rel="noopener">JEV source</a></div>
-      </div>
-      <div>
-        <div class="spec"><div class="h">Specification</div><dl>
-          <div class="row"><dt>Form</dt><dd>two MCP servers — the protocol AI assistants use to call tools</dd></div>
-          <div class="row"><dt>Stack</dt><dd>PiMoa: TypeScript, Node 22+ · JEV: Go</dd></div>
-          <div class="row"><dt>Safety</dt><dd>read-only sandbox; <em>fail closed</em> — if one reviewer fails, the whole run fails rather than give half an answer</dd></div>
-          <div class="row"><dt>Calibration</dt><dd>212 judgments; ≥ 0.99 → 96.1 % correct; 0.5 – 0.7 → 33.3 %</dd></div>
-          <div class="row"><dt>Honest status</dt><dd>6 PiMoa test files and 1 JEV test are red on my own machine too; they are listed in the README, not hidden</dd></div>
-          <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
-        </dl></div>
-        <figure>
-          <svg viewBox="0 0 520 470" role="img" aria-label="Diagram: an agent asks PiMoa; three models review blind in a sandbox; an aggregator combines them; JEV gives a calibrated probability; below 0.7 a human looks" font-family="Archivo, sans-serif" font-size="12">
-            <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
-            <rect x="0" y="0" width="520" height="470" fill="#fff"/>
-            <rect x="170" y="18" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="43" text-anchor="middle">YOUR AI AGENT</text>
-            <line x1="260" y1="58" x2="260" y2="86" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="120" y="88" width="280" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="108" text-anchor="middle" fill="#141414" font-weight="600">PiMoa</text><text x="260" y="124" text-anchor="middle" font-size="10.5">exact files · real line numbers</text>
-            <rect x="34" y="158" width="452" height="104" fill="none" stroke="#141414" stroke-width="1.4" stroke-dasharray="6 4"/>
-            <g stroke="#141414" stroke-width="1.4" fill="#fff"><rect x="58" y="190" width="120" height="50"/><rect x="200" y="190" width="120" height="50"/><rect x="342" y="190" width="120" height="50"/></g>
-            <text x="118" y="212" text-anchor="middle">MODEL A</text><text x="260" y="212" text-anchor="middle">MODEL B</text><text x="402" y="212" text-anchor="middle">MODEL C</text>
-            <text x="118" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text><text x="260" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text><text x="402" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text>
-            <g stroke="#141414" stroke-width="1.3"><line x1="200" y1="132" x2="118" y2="188" marker-end="url(#a3)"/><line x1="260" y1="132" x2="260" y2="188" marker-end="url(#a3)"/><line x1="320" y1="132" x2="402" y2="188" marker-end="url(#a3)"/>
-            <line x1="118" y1="240" x2="230" y2="290" marker-end="url(#a3)"/><line x1="260" y1="240" x2="260" y2="288" marker-end="url(#a3)"/><line x1="402" y1="240" x2="290" y2="290" marker-end="url(#a3)"/></g>
-            <rect x="170" y="290" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="315" text-anchor="middle">AGGREGATOR</text>
-            <line x1="260" y1="330" x2="260" y2="356" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="150" y="358" width="220" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="378" text-anchor="middle" fill="#141414" font-weight="600">JEV JUDGE</text><text x="260" y="394" text-anchor="middle" font-size="10.5">p = calibrated probability</text>
-            <line x1="200" y1="402" x2="120" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/><line x1="320" y1="402" x2="400" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/>
-            <text x="110" y="448" text-anchor="middle">p ≥ 0.7</text><text x="110" y="463" text-anchor="middle" font-size="10.5" fill="#6B6660">verdict + file:line evidence</text>
-            <text x="410" y="448" text-anchor="middle" fill="#FF4F1F" font-weight="600">p &lt; 0.7</text><text x="410" y="463" text-anchor="middle" font-size="10.5" fill="#FF4F1F">a human looks</text>
-            <text x="44" y="173" font-size="10.5" fill="#141414" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">SANDBOX · read-only · no network · no keys</text>
-          </svg>
-          <figcaption><b>FIG 03.1</b> — Three blind reviewers in a sandbox, one aggregator, one calibrated judge. If any reviewer fails, the run fails.</figcaption>
-        </figure>
-      </div>
-    </div>
-    <table class="rev"><caption>Revision block</caption>
-      <tr><th>Rev</th><th>What changed</th><th>Why</th></tr>
-      <tr><td>A</td><td>PiMoa v1: blind multi-model review in a sandbox <span class="stamp">FAILED</span></td><td>Returned empty answers on real code after minutes of work</td></tr>
-      <tr><td>B</td><td>PiMoa v2: real line numbers, tool-call and token caps, per-model output caps</td><td>Measured three causes — 251,808 tokens, 130-line drift, a 10,902-character answer. Result: 22.7 s, exact line numbers</td></tr>
-      <tr><td>C</td><td>Added JEV, the calibrated judge</td><td>A panel of models can be wrong together; 212 judgments showed its probability means something</td></tr>
-      <tr><td>D</td><td>Twelve small batches teaching the pipeline to ask for missing material</td><td>The judge kept saying “not enough evidence”; now the gap is carried into the next round automatically</td></tr>
-      <tr><td>E</td><td>Removed an automatic “close the case” step <span class="stamp">DELETED</span></td><td>An effectiveness analysis (Oct 2026) showed it cost more than it saved</td></tr>
-    </table>
-    <div class="sheetblock"><div><span class="k">Project</span>PiMoa + JEV</div><div><span class="k">Made for</span>truth</div><div><span class="k">Date</span>2025 – 26</div><div><span class="k">Sheet</span>03 / 05</div></div>
-  </div>
-</section>
-
-<section class="frame sheet" id="made-for-the-daily-job">
-  <div class="strip"><span><b>No. 04</b> / 05</span><span>Made for the daily job</span><span>2025 – 2026</span></div>
-  <div class="pad">
-    <p class="made">Made for the daily job</p>
-    <h2>Hands for the agent</h2>
-    <p class="sub">An AI that only talks is an adviser. Daily work is spreadsheets, documents, slides and web pages.</p>
-    <div class="cols">
-      <div class="story">
-        <h3>One door for Office files</h3>
-        <p><strong>office-gateway</strong> is a single door for Word, Excel and PowerPoint. Behind it, every job goes to the engine that does it best: quick reads and edits to a command-line tool, heavy formula work to a calculation engine, delicate Excel edits through a lossless unpack-and-repack, slides rendered from HTML into real PowerPoint, Word files built directly from their XML format. The engines themselves come from open-source tools and skill packs; what I wrote is the part that decides <em>which hand is safe for which job</em>.</p>
-        <h3>One door for the web</h3>
-        <p><strong>browser-gateway</strong> does the same for websites: four engines behind one door — one that clicks and types, 145 adapters that pull structured data from specific sites, read-only diagnostics, and custom scripts. Two lessons live in its comments. On 6 August I found I had described one engine wrongly — it is an installer and does not handle logins — and fixed it that day, because an AI agent believes whatever a tool says about itself. And a live browser is never shared: two agents typing into one tab corrupt each other’s work, so each one gets its own.</p>
-        <h3>The hand I had to build myself</h3>
-        <p>One job no ready-made engine did safely: change one number in a real workbook — full of formulas, charts and hidden sheets — without quietly breaking everything else. An agent asked to do it will often rewrite the whole file; it still opens, and it is still wrong. <strong>Sheet Shadow</strong> lets the agent edit a shadow copy first, shows the impact, writes only the parts that changed into a <em>new</em> file, and runs a final check for formula errors, damaged structure and changed macros before handing it back.</p>
-        <p class="pull">Routing decides which hand to use. Sheet Shadow is the hand I had to build myself.</p>
-        <div class="btns"><a class="btn primary" href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/sheet_shadow" target="_blank" rel="noopener">Sheet Shadow source</a></div>
-      </div>
-      <div>
-        <div class="spec"><div class="h">Specification</div><dl>
-          <div class="row"><dt>office</dt><dd>Python MCP server; routes Word / Excel / PowerPoint jobs to five engines</dd></div>
-          <div class="row"><dt>browser</dt><dd>Python MCP server; 4 engines, 145 site adapters</dd></div>
-          <div class="row"><dt>Sheet Shadow</dt><dd>Go MCP server; preview before write; save to a new copy; tested against real workbooks</dd></div>
-          <div class="row"><dt>Source</dt><dd>Sheet Shadow: public, MIT. The two gateways: not yet public — they bundle third-party engines whose licences I am still checking.</dd></div>
-        </dl></div>
-        <figure>
-          <svg viewBox="0 0 520 430" role="img" aria-label="Diagram: an AI agent reaches three doors: office-gateway routing to five Office engines, browser-gateway routing to four web engines, and Sheet Shadow, a hand built from scratch for editing existing workbooks" font-family="Archivo, sans-serif" font-size="11.5">
-            <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
-            <rect x="0" y="0" width="520" height="430" fill="#fff"/>
-            <rect x="180" y="16" width="160" height="38" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="40" text-anchor="middle">AI AGENT</text>
-            <g stroke="#141414" stroke-width="1.3"><line x1="220" y1="54" x2="90" y2="92" marker-end="url(#a4)"/><line x1="260" y1="54" x2="260" y2="92" marker-end="url(#a4)"/><line x1="300" y1="54" x2="430" y2="92" marker-end="url(#a4)"/></g>
-            <rect x="14" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="90" y="118" text-anchor="middle" fill="#141414" font-weight="600">office-gateway</text>
-            <rect x="184" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="118" text-anchor="middle" fill="#141414" font-weight="600">browser-gateway</text>
-            <rect x="354" y="94" width="152" height="40" fill="#fff" stroke="#FF4F1F" stroke-width="2"/><text x="430" y="113" text-anchor="middle" fill="#FF4F1F" font-weight="600">Sheet Shadow</text><text x="430" y="127" text-anchor="middle" font-size="9.5" fill="#FF4F1F">built from scratch</text>
-            <g font-size="10.5"><g fill="none" stroke="#141414" stroke-width="1"><rect x="14" y="156" width="152" height="30"/><rect x="14" y="192" width="152" height="30"/><rect x="14" y="228" width="152" height="30"/><rect x="14" y="264" width="152" height="30"/><rect x="14" y="300" width="152" height="30"/></g>
-            <text x="90" y="175" text-anchor="middle">quick read / edit</text><text x="90" y="211" text-anchor="middle">formula engine</text><text x="90" y="247" text-anchor="middle">lossless repack</text><text x="90" y="283" text-anchor="middle">HTML → slides</text><text x="90" y="319" text-anchor="middle">XML → Word</text>
-            <g fill="none" stroke="#141414" stroke-width="1"><rect x="184" y="156" width="152" height="30"/><rect x="184" y="192" width="152" height="30"/><rect x="184" y="228" width="152" height="30"/><rect x="184" y="264" width="152" height="30"/></g>
-            <text x="260" y="175" text-anchor="middle">click &amp; type</text><text x="260" y="211" text-anchor="middle">145 site adapters</text><text x="260" y="247" text-anchor="middle">read-only diagnostics</text><text x="260" y="283" text-anchor="middle">custom scripts</text>
-            <g fill="none" stroke="#FF4F1F" stroke-width="1"><rect x="354" y="156" width="152" height="30"/><rect x="354" y="192" width="152" height="30"/><rect x="354" y="228" width="152" height="30"/><rect x="354" y="264" width="152" height="30"/></g>
-            <text x="430" y="175" text-anchor="middle">1 · shadow copy</text><text x="430" y="211" text-anchor="middle">2 · preview impact</text><text x="430" y="247" text-anchor="middle">3 · write changed parts</text><text x="430" y="283" text-anchor="middle">4 · final check</text></g>
-            <g stroke="#141414" stroke-width="1"><line x1="90" y1="134" x2="90" y2="154"/><line x1="260" y1="134" x2="260" y2="154"/></g><line x1="430" y1="134" x2="430" y2="154" stroke="#FF4F1F"/>
-            <line x1="14" y1="356" x2="506" y2="356" stroke="#141414" stroke-width=".8" stroke-dasharray="3 3"/>
-            <text x="20" y="378" font-size="10.5" fill="#6B6660">RULES, each learned from an incident:</text>
-            <text x="20" y="396" font-size="10.5">· a tool must describe itself truthfully</text>
-            <text x="20" y="412" font-size="10.5">· a live browser is never shared · a workbook is saved to a new copy</text>
-          </svg>
-          <figcaption><b>FIG 04.1</b> — Two routers that pick the right hand, and one hand built for the job no engine did safely.</figcaption>
-        </figure>
-      </div>
-    </div>
-    <figure class="fig-wide"><img src="assets/sheet-shadow-principle.svg" alt="Sheet Shadow principle: the agent edits a shadow model, previews, applies semantic operations, and saves a new copy by targeted patching" loading="lazy"><figcaption><b>FIG 04.2</b> — Sheet Shadow in detail: the original workbook is only touched where a change was intended — and never in place.</figcaption></figure>
-    <div class="sheetblock"><div><span class="k">Project</span>office · browser · Sheet Shadow</div><div><span class="k">Made for</span>the daily job</div><div><span class="k">Date</span>2025 – 26</div><div><span class="k">Sheet</span>04 / 05</div></div>
-  </div>
-</section>
-
-<section class="frame sheet" id="made-for-everyone">
-  <div class="strip"><span><b>No. 05</b> / 05</span><span>Made for everyone and everywhere</span><span>Oct 2026</span></div>
-  <div class="pad">
-    <p class="made">Made for everyone and everywhere</p>
-    <h2>Where should the tools live?</h2>
-    <p class="sub">The tools moved house four times in one week, each time because something broke. Then they made one last move — into WeChat, where people already are.</p>
-    <div class="cols">
-      <div class="story">
-        <p>By October, three AI assistants on my Mac were using these tools. Then I wanted to reach them from my phone while the Mac was off. Then I wanted assistants from other companies to use them too — including one that cannot install anything at all.</p>
-        <h3>Move A · a shared gateway on my Mac</h3>
-        <p>Each assistant was launching its own copy of every tool, so I built one gateway they all share. One day, six tools started at the same moment and all of them silently hung: macOS gives a background service only 256 file handles. The fix is a single line — <code class="mono">10240</code> — with a comment beside it saying it must never be deleted.</p>
-        <h3>Move B · a rented cloud computer</h3>
-        <p>To keep working while the Mac sleeps, the same gateway now also runs on a small rented cloud computer, shared by three assistants, behind a private network that only my own devices can join.</p>
-        <h3>Move C · tearing a door down <span class="stamp">SUPERSEDED</span></h3>
-        <p>The cloud computer is billed by the minute and sleeps when idle. A permanently open public tunnel counted as activity, so it never slept — about 76 € a month. I tested three ways to get a cheap public entrance; all three were dead ends, and all three are written down so nobody walks them again.</p>
-        <h3>Move D · a free worker on the open internet</h3>
-        <p>One assistant cannot install software, speaks an older version of the protocol, and cannot send login headers. So the tools moved to a Cloudflare Worker that speaks both protocol versions and signs in with OAuth. Today it offers 347 abilities — reading the calendar, sending mail, opening files, writing notes — to 10 AI assistants. The local gateway was not deleted: <span class="stamp blue">COLD STANDBY</span></p>
-        <p>Moving house carefully is its own skill. One move touched about 40 references across configuration files and scripts. I copied first, checked the copy side by side, switched over in a planned window, watched it for 24 hours, and only then removed the old one — with the rollback practised in advance. It still found a way to break: macOS will not start a background service from an external disk. The fix was to split the layers — the service on the internal disk, the tools wherever they live.</p>
-        <p class="pull">The architecture is a fossil record of things that broke.</p>
-        <h3>Move E · into WeChat</h3>
-        <p>Tools on a server help AI assistants. People live somewhere else — in China, that place is WeChat. Family plans, school notices and the articles worth keeping all arrive there, and none of it ever reached an assistant. So the last move went from inside WeChat to an AI assistant, and back.</p>
-        <h3>Forward it, and it is handled</h3>
-        <p>Forward a message or an article to a bot in WeChat. A small program on an old Mac at home receives it through Tencent’s official bot channel and drops it into an inbox folder. <strong>Muse</strong> — an AI assistant that lives on its own cloud computer — checks that inbox every minute, puts any dates into the calendar, summarises the article, and writes a reply into an outbox. The program sends the reply back into the same WeChat chat.</p>
-        <p>Why an old Mac at home? WeChat blocks article requests that come from cloud servers. So the fetching happens on a home connection, and the assistant in the cloud only ever reads the saved text. It can reach exactly one folder on that Mac — nothing else.</p>
-        <h3>Tap “favourite”, and it is filed</h3>
-        <p>The second stream needs no action at all. When I tap “favourite” on an article — a habit I already had — it appears in a knowledge base about two minutes later, sorted into one of 12 folders: by my own rules first, and by a small language model when no rule fits. It now holds about 1,780 items. Forward a WeChat video post to the bot, and it goes straight into the same knowledge base, with a ✅ in the chat.</p>
-        <h3>Written down: what does not work</h3>
-        <p>The bot channel does not deliver merged chat-history cards, so the bot politely asks for messages one at a time. Image-only posts have no text, so it asks for a screenshot. Favourited images and files carry no link, so they cannot be filed <span class="stamp">DEAD END</span> — recorded as one. A reply can never be sent twice: one running copy, a duplicate check, and an atomic claim on every reply. And the honest weak point: the old Mac has to stay on. A plan to move it onto a cloud computer is written down and waiting.</p>
-        <p class="pull">The best interface is the one people already use every day.</p>
-        <div class="btns"><a class="btn primary" href="https://github.com/jerryxugit-2026/Build-MCP-Gateway" target="_blank" rel="noopener">Gateway &amp; Worker source</a></div>
-      </div>
-      <div>
-        <div class="spec"><div class="h">Specification</div><dl>
-          <div class="row"><dt>Clients</dt><dd>10 AI assistants from different companies</dd></div>
-          <div class="row"><dt>Served</dt><dd>11 services · 347 abilities (calendar, mail, files, notes …)</dd></div>
-          <div class="row"><dt>Protocol</dt><dd>MCP 2026-07-28 in front; older tools behind, started only when needed</dd></div>
-          <div class="row"><dt>Cost</dt><dd>Cloudflare free tier; the cloud computer sleeps when idle</dd></div>
-          <div class="row"><dt>Security</dt><dd>private network with an access list; OAuth; every account, key and password in the public source is a mock</dd></div>
-          <div class="row"><dt>WeChat</dt><dd>forward → handled in about a minute; favourite → filed in about two minutes; ~1,780 items in 12 folders</dd></div>
-          <div class="row"><dt>Licence</dt><dd>MIT (gateway &amp; Worker). The WeChat bridge is built on a third-party open-source bridge and is not yet public.</dd></div>
-        </dl></div>
-        <figure>
-          <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="Archivo, sans-serif" font-size="11.5">
-            <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
-            <rect x="0" y="0" width="520" height="520" fill="#fff"/>
-            <g font-size="10.5" fill="#6B6660"><text x="80" y="10">REV A</text><text x="80" y="120">REV B</text><text x="80" y="230">REV C</text><text x="80" y="340">REV D</text></g>
-            <rect x="80" y="14" width="200" height="66" fill="none" stroke="#141414" stroke-width="1.6"/><text x="180" y="38" text-anchor="middle" font-weight="600">MAC · gateway</text><text x="180" y="56" text-anchor="middle" font-size="10.5">3 assistants share one pool</text><text x="180" y="71" text-anchor="middle" font-size="10.5" fill="#FF4F1F">256 → 10240 file handles</text>
-            <line x1="180" y1="80" x2="180" y2="122" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="124" width="200" height="66" fill="none" stroke="#141414" stroke-width="1.6"/><text x="180" y="148" text-anchor="middle" font-weight="600">CLOUD COMPUTER</text><text x="180" y="166" text-anchor="middle" font-size="10.5">works while the Mac sleeps</text><text x="180" y="181" text-anchor="middle" font-size="10.5">private network · access list</text>
-            <line x1="180" y1="190" x2="180" y2="232" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="234" width="200" height="66" fill="none" stroke="#FF4F1F" stroke-width="1.6" stroke-dasharray="6 4"/><text x="180" y="258" text-anchor="middle" font-weight="600" fill="#FF4F1F">PUBLIC TUNNEL</text><text x="180" y="276" text-anchor="middle" font-size="10.5" fill="#FF4F1F">never sleeps · ≈76 € / month</text>
-            <line x1="90" y1="240" x2="270" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/><line x1="270" y1="240" x2="90" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/>
-            <line x1="180" y1="300" x2="180" y2="342" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="344" width="200" height="74" fill="#ECE6DC" stroke="#141414" stroke-width="1.8"/><text x="180" y="368" text-anchor="middle" font-weight="600" fill="#141414">CLOUDFLARE WORKER</text><text x="180" y="386" text-anchor="middle" font-size="10.5">free · 2 protocols · OAuth</text><text x="180" y="404" text-anchor="middle" font-size="10.5">11 endpoints · 347 tools</text>
-            <g stroke="#141414" stroke-width="1.2"><line x1="280" y1="372" x2="352" y2="330" marker-end="url(#a5)"/><line x1="280" y1="381" x2="352" y2="381" marker-end="url(#a5)"/><line x1="280" y1="390" x2="352" y2="432" marker-end="url(#a5)"/></g>
-            <g fill="none" stroke="#141414" stroke-width="1"><rect x="354" y="314" width="150" height="30"/><rect x="354" y="366" width="150" height="30"/><rect x="354" y="418" width="150" height="30"/></g>
-            <g font-size="10.5" text-anchor="middle"><text x="429" y="333">assistants on Mac</text><text x="429" y="385">assistants in cloud</text><text x="429" y="437">other companies’ AIs</text></g>
-            <text x="429" y="466" text-anchor="middle" font-size="10.5" fill="#141414" font-weight="600">10 AI assistants</text>
-            <path d="M80,47 C14,47 14,381 78,381" fill="none" stroke="#141414" stroke-width="1.1" stroke-dasharray="4 4"/>
-            <text x="28" y="470" font-size="10.5" fill="#141414">Mac gateway kept</text><text x="28" y="485" font-size="10.5" fill="#141414">as a cold standby</text>
-          </svg>
-          <figcaption><b>FIG 05.1</b> — Four moves, each forced by a specific failure. Nothing that still works was thrown away.</figcaption>
-        </figure>
-      </div>
-    </div>
-    <figure class="fig-wide">
-      <svg viewBox="0 0 1040 400" role="img" aria-label="Diagram: two streams from WeChat. Forward a message: Tencent bot channel to a bridge on an old Mac at home, inbox, Muse AI assistant in the cloud checks every minute, writes calendar and summary, reply goes back to WeChat. Tap favourite: the old Mac reads new favourites every two minutes, rules then a small language model sort them into a knowledge base with 12 folders and about 1,780 items." font-family="Archivo, sans-serif" font-size="13">
-        <defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker>
-        <marker id="a6o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF4F1F"/></marker></defs>
-        <rect x="0" y="0" width="1040" height="400" fill="#fff"/>
-        <rect x="24" y="150" width="150" height="100" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/>
-        <text x="99" y="192" text-anchor="middle" font-weight="700">WeChat</text><text x="99" y="212" text-anchor="middle" font-size="11.5" fill="#6B6660">on my phone</text>
-        <text x="240" y="44" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 1 · FORWARD IT</text>
-        <text x="240" y="372" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 2 · TAP “FAVOURITE”</text>
-        <path d="M174,175 C210,175 210,90 246,90" fill="none" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
-        <rect x="248" y="66" width="170" height="48" fill="none" stroke="#141414" stroke-width="1.4"/><text x="333" y="88" text-anchor="middle" font-size="12">Tencent official</text><text x="333" y="104" text-anchor="middle" font-size="12">bot channel</text>
-        <line x1="418" y1="90" x2="468" y2="90" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
-        <rect x="470" y="56" width="230" height="290" fill="none" stroke="#141414" stroke-width="2"/>
-        <text x="585" y="80" text-anchor="middle" font-weight="700">OLD MAC AT HOME</text><text x="585" y="97" text-anchor="middle" font-size="11" fill="#6B6660">home connection · fetches articles</text>
-        <rect x="490" y="112" width="190" height="34" fill="#ECE6DC" stroke="#141414"/><text x="585" y="134" text-anchor="middle" font-size="12">inbox  ·  outbox</text>
-        <rect x="490" y="268" width="190" height="56" fill="#ECE6DC" stroke="#141414"/><text x="585" y="291" text-anchor="middle" font-size="12">reads new favourites</text><text x="585" y="309" text-anchor="middle" font-size="12">every ~2 minutes</text>
-        <path d="M174,225 C230,225 230,296 488,296" fill="none" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
-        <rect x="770" y="66" width="246" height="92" fill="#fff" stroke="#FF4F1F" stroke-width="2"/>
-        <text x="893" y="90" text-anchor="middle" font-weight="700" fill="#FF4F1F">MUSE · AI in the cloud</text>
-        <text x="893" y="110" text-anchor="middle" font-size="11.5">checks the inbox every minute</text><text x="893" y="127" text-anchor="middle" font-size="11.5">dates → calendar · article → summary</text><text x="893" y="144" text-anchor="middle" font-size="11" fill="#6B6660">can reach one folder, nothing else</text>
-        <line x1="680" y1="122" x2="768" y2="104" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
-        <line x1="768" y1="138" x2="682" y2="138" stroke="#FF4F1F" stroke-width="1.4" marker-end="url(#a6o)"/>
-        <path d="M490,140 C330,140 300,200 176,200" fill="none" stroke="#FF4F1F" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a6o)"/>
-        <text x="300" y="192" font-size="11.5" fill="#FF4F1F">reply back into the chat</text>
-        <rect x="770" y="248" width="246" height="92" fill="#fff" stroke="#141414" stroke-width="1.6"/>
-        <text x="893" y="272" text-anchor="middle" font-weight="700">KNOWLEDGE BASE</text>
-        <text x="893" y="292" text-anchor="middle" font-size="11.5">my rules first, then a small model</text><text x="893" y="309" text-anchor="middle" font-size="11.5">12 folders · ~1,780 items</text>
-        <line x1="680" y1="296" x2="768" y2="296" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
-      </svg>
-      <figcaption><b>FIG 05.2</b> — Move E. Two streams out of WeChat: forward something and an AI assistant handles it; tap “favourite” and it is filed. The fetching stays on a home connection.</figcaption>
-    </figure>
-    <table class="rev"><caption>Revision block</caption>
-      <tr><th>Rev</th><th>Date</th><th>Where the tools went</th><th>What forced the move</th></tr>
-      <tr><td>A</td><td class="date">2026-10-19</td><td>A shared gateway on my Mac</td><td>Six tools started together and silently hung — 256 file handles</td></tr>
-      <tr><td>B</td><td class="date">2026-10-21</td><td>A rented cloud computer</td><td>Work had to continue while the Mac was off</td></tr>
-      <tr><td>C</td><td class="date">2026-10-22</td><td>Public entrance removed <span class="stamp">SUPERSEDED</span></td><td>An always-open tunnel kept the machine awake — ≈ 76 € a month</td></tr>
-      <tr><td>D</td><td class="date">2026-10-22 → 23</td><td>A free Cloudflare Worker; Mac kept as cold standby</td><td>An assistant that cannot install anything, speaks an older protocol and cannot send headers</td></tr>
-      <tr><td>E</td><td class="date">2026-10-21 → 25</td><td>Into WeChat: a bridge on an old Mac at home, Muse in the cloud</td><td>Life happens in WeChat, and WeChat blocks cloud servers from fetching articles</td></tr>
-    </table>
-    <div class="sheetblock"><div><span class="k">Project</span>MCP gateway · cloud · Worker</div><div><span class="k">Made for</span>everyone</div><div><span class="k">Date</span>Oct 2026</div><div><span class="k">Sheet</span>05 / 05</div></div>
-  </div>
-</section>
-
-<section class="frame notes" id="notes">
-  <div class="strip"><span><b>General notes</b></span><span>Across all five</span><span>What I keep relearning</span></div>
-  <div class="pad">
-    <ol>
-      <li><span class="t">Build for the person next to you.</span><span class="see">No. 01 · 02</span></li>
-      <li><span class="t">Measure before you argue.</span><span class="see">No. 03</span></li>
-      <li><span class="t">Fail closed: no answer beats a confident half-answer.</span><span class="see">No. 03 · 04</span></li>
-      <li><span class="t">Write the failures down — and delete what doesn’t earn its keep.</span><span class="see">Every “failed” and “deleted”</span></li>
-    </ol>
-  </div>
-</section>
-
 <footer>
+  <p class="pagelist"><a href="index.html" class="on">Contents</a><a href="me.html">01</a><a href="mum.html">02</a><a href="truth.html">03</a><a href="daily-job.html">04</a><a href="everyone.html">05</a><a href="notes.html">Epilogue</a></p>
   Source: <a href="https://github.com/jerryxugit-2026/Build-Vocab-Master">Build-Vocab-Master</a> · <a href="https://github.com/jerryxugit-2026/dsh-web-companion">dsh-web-companion</a> · <a href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa">Build-Agent-Tools-PiMoa</a> (PiMoa, JEV, Sheet Shadow) · <a href="https://github.com/jerryxugit-2026/Build-MCP-Gateway">Build-MCP-Gateway</a><br>
   Every account, key and password in the published source is a mock.<br>
-  © 2026 Ziyang Xu · <a href="#top">back to the cover ↑</a>
+  © 2026 Ziyang Xu
 </footer>
-
 </div>
 </body>
 </html>
