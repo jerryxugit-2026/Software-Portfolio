@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Made for … | Software by Ziyang Xu</title>
-<meta name="description" content="Five pieces of software by Ziyang Xu, each made for someone: for me, for my mum, for the truth, for the daily job, and for everywhere and everyone. Stories, measurements, failures — and the source.">
+<meta name="description" content="Five pieces of software by Ziyang Xu, each made for someone: for me, for my mum, for the truth, for the daily job, and for everyone and everywhere. Stories, measurements, failures — and the source.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -39,6 +39,9 @@ a:hover{color:var(--accent)}
 .tblock .full{grid-column:1/-1;color:var(--muted);font-style:italic;font-family:var(--serif);font-size:19px}
 .numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px}
 .numbers b{display:block;font-size:44px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.numbers a{display:block;border:none;color:var(--ink)}
+.numbers a:hover b{color:var(--accent)}
+.numbers em{display:block;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-top:8px}
 .numbers span{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
 .sheet .made{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0}
 .sheet h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7vw,92px);line-height:.95;margin:8px 0 18px;letter-spacing:-.015em}
@@ -107,7 +110,7 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
       <li><span class="no">02</span><a href="#made-for-mum" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
       <li><span class="no">03</span><a href="#made-for-truth" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
       <li><span class="no">04</span><a href="#made-for-the-daily-job" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
-      <li><span class="no">05</span><a href="#made-for-everyone" class="for">everywhere and everyone <span>— where the tools live</span></a><span class="what">MCP gateway · cloud · Worker</span></li>
+      <li><span class="no">05</span><a href="#made-for-everyone" class="for">everyone and everywhere <span>— where the tools live, even inside WeChat</span></a><span class="what">gateway · cloud · WeChat</span></li>
     </ol>
     <p class="lede">Every piece of software here started with someone who needed it. First it was me and my buddies. Then my mum. Then I needed AI to stop telling me confident lies, to do real work without breaking things, and to be reachable from anywhere. Each chapter tells one of those stories — with the measurements, the failures, and the things I deleted.</p>
     <div class="tblock">
@@ -118,11 +121,11 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
       <div class="full"><span class="k">Note</span>Every account, key and password in the published source is a mock. Real credentials never leave my machine.</div>
     </div>
     <div class="numbers">
-      <div><b>®</b><span>registered software copyright — No. 01</span></div>
-      <div><b>3 steps</b><span>to install, no compiler — No. 02</span></div>
-      <div><b>96.1 %</b><span>right when the judge says it is ≥ 0.99 sure — No. 03</span></div>
-      <div><b>145</b><span>website adapters behind one browser door — No. 04</span></div>
-      <div><b>347</b><span>tools served to 10 AI assistants — No. 05</span></div>
+      <a href="#made-for-me"><b>®</b><span>a registered software copyright for the study tool</span><em>No. 01 →</em></a>
+      <a href="#made-for-mum"><b>3 steps</b><span>to install the browser assistant — no programming needed</span><em>No. 02 →</em></a>
+      <a href="#made-for-truth"><b>96.1 %</b><span>how often the AI judge is right when it says it is 99 % sure</span><em>No. 03 →</em></a>
+      <a href="#made-for-the-daily-job"><b>145</b><span>ready-made connectors that let the AI agent pull data from websites</span><em>No. 04 →</em></a>
+      <a href="#made-for-everyone"><b>347</b><span>abilities — calendar, mail, files, notes — shared by 10 AI assistants</span><em>No. 05 →</em></a>
     </div>
   </div>
 </header>
@@ -322,11 +325,11 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
 </section>
 
 <section class="frame sheet" id="made-for-everyone">
-  <div class="strip"><span><b>No. 05</b> / 05</span><span>Made for everywhere and everyone</span><span>Oct 2026</span></div>
+  <div class="strip"><span><b>No. 05</b> / 05</span><span>Made for everyone and everywhere</span><span>Oct 2026</span></div>
   <div class="pad">
-    <p class="made">Made for everywhere and everyone</p>
+    <p class="made">Made for everyone and everywhere</p>
     <h2>Where should the tools live?</h2>
-    <p class="sub">The tools moved house four times in one week. Every move was forced by something that broke.</p>
+    <p class="sub">The tools moved house four times in one week, each time because something broke. Then they made one last move — into WeChat, where people already are.</p>
     <div class="cols">
       <div class="story">
         <p>By October, three AI assistants on my Mac were using these tools. Then I wanted to reach them from my phone while the Mac was off. Then I wanted assistants from other companies to use them too — including one that cannot install anything at all.</p>
@@ -337,19 +340,30 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
         <h3>Move C · tearing a door down <span class="stamp">SUPERSEDED</span></h3>
         <p>The cloud computer is billed by the minute and sleeps when idle. A permanently open public tunnel counted as activity, so it never slept — about 76 € a month. I tested three ways to get a cheap public entrance; all three were dead ends, and all three are written down so nobody walks them again.</p>
         <h3>Move D · a free worker on the open internet</h3>
-        <p>One assistant cannot install software, speaks an older version of the protocol, and cannot send login headers. So the tools moved to a Cloudflare Worker that speaks both protocol versions and signs in with OAuth. Today it serves 11 endpoints and 347 tools to 10 AI assistants. The local gateway was not deleted: <span class="stamp blue">COLD STANDBY</span></p>
+        <p>One assistant cannot install software, speaks an older version of the protocol, and cannot send login headers. So the tools moved to a Cloudflare Worker that speaks both protocol versions and signs in with OAuth. Today it offers 347 abilities — reading the calendar, sending mail, opening files, writing notes — to 10 AI assistants. The local gateway was not deleted: <span class="stamp blue">COLD STANDBY</span></p>
         <p>Moving house carefully is its own skill. One move touched about 40 references across configuration files and scripts. I copied first, checked the copy side by side, switched over in a planned window, watched it for 24 hours, and only then removed the old one — with the rollback practised in advance. It still found a way to break: macOS will not start a background service from an external disk. The fix was to split the layers — the service on the internal disk, the tools wherever they live.</p>
         <p class="pull">The architecture is a fossil record of things that broke.</p>
+        <h3>Move E · into WeChat</h3>
+        <p>Tools on a server help AI assistants. People live somewhere else — in China, that place is WeChat. Family plans, school notices and the articles worth keeping all arrive there, and none of it ever reached an assistant. So the last move went from inside WeChat to an AI assistant, and back.</p>
+        <h3>Forward it, and it is handled</h3>
+        <p>Forward a message or an article to a bot in WeChat. A small program on an old Mac at home receives it through Tencent’s official bot channel and drops it into an inbox folder. <strong>Muse</strong> — an AI assistant that lives on its own cloud computer — checks that inbox every minute, puts any dates into the calendar, summarises the article, and writes a reply into an outbox. The program sends the reply back into the same WeChat chat.</p>
+        <p>Why an old Mac at home? WeChat blocks article requests that come from cloud servers. So the fetching happens on a home connection, and the assistant in the cloud only ever reads the saved text. It can reach exactly one folder on that Mac — nothing else.</p>
+        <h3>Tap “favourite”, and it is filed</h3>
+        <p>The second stream needs no action at all. When I tap “favourite” on an article — a habit I already had — it appears in a knowledge base about two minutes later, sorted into one of 12 folders: by my own rules first, and by a small language model when no rule fits. It now holds about 1,780 items. Forward a WeChat video post to the bot, and it goes straight into the same knowledge base, with a ✅ in the chat.</p>
+        <h3>Written down: what does not work</h3>
+        <p>The bot channel does not deliver merged chat-history cards, so the bot politely asks for messages one at a time. Image-only posts have no text, so it asks for a screenshot. Favourited images and files carry no link, so they cannot be filed <span class="stamp">DEAD END</span> — recorded as one. A reply can never be sent twice: one running copy, a duplicate check, and an atomic claim on every reply. And the honest weak point: the old Mac has to stay on. A plan to move it onto a cloud computer is written down and waiting.</p>
+        <p class="pull">The best interface is the one people already use every day.</p>
         <div class="btns"><a class="btn primary" href="https://github.com/jerryxugit-2026/Build-MCP-Gateway" target="_blank" rel="noopener">Gateway &amp; Worker source</a></div>
       </div>
       <div>
         <div class="spec"><div class="h">Specification</div><dl>
           <div class="row"><dt>Clients</dt><dd>10 AI assistants from different companies</dd></div>
-          <div class="row"><dt>Served</dt><dd>11 endpoints · 347 tools</dd></div>
+          <div class="row"><dt>Served</dt><dd>11 services · 347 abilities (calendar, mail, files, notes …)</dd></div>
           <div class="row"><dt>Protocol</dt><dd>MCP 2026-07-28 in front; older tools behind, started only when needed</dd></div>
           <div class="row"><dt>Cost</dt><dd>Cloudflare free tier; the cloud computer sleeps when idle</dd></div>
           <div class="row"><dt>Security</dt><dd>private network with an access list; OAuth; every account, key and password in the public source is a mock</dd></div>
-          <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
+          <div class="row"><dt>WeChat</dt><dd>forward → handled in about a minute; favourite → filed in about two minutes; ~1,780 items in 12 folders</dd></div>
+          <div class="row"><dt>Licence</dt><dd>MIT (gateway &amp; Worker). The WeChat bridge is built on a third-party open-source bridge and is not yet public.</dd></div>
         </dl></div>
         <figure>
           <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="Archivo, sans-serif" font-size="11.5">
@@ -375,12 +389,44 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
         </figure>
       </div>
     </div>
+    <figure class="fig-wide">
+      <svg viewBox="0 0 1040 400" role="img" aria-label="Diagram: two streams from WeChat. Forward a message: Tencent bot channel to a bridge on an old Mac at home, inbox, Muse AI assistant in the cloud checks every minute, writes calendar and summary, reply goes back to WeChat. Tap favourite: the old Mac reads new favourites every two minutes, rules then a small language model sort them into a knowledge base with 12 folders and about 1,780 items." font-family="Archivo, sans-serif" font-size="13">
+        <defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker>
+        <marker id="a6o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF4F1F"/></marker></defs>
+        <rect x="0" y="0" width="1040" height="400" fill="#fff"/>
+        <rect x="24" y="150" width="150" height="100" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/>
+        <text x="99" y="192" text-anchor="middle" font-weight="700">WeChat</text><text x="99" y="212" text-anchor="middle" font-size="11.5" fill="#6B6660">on my phone</text>
+        <text x="240" y="44" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 1 · FORWARD IT</text>
+        <text x="240" y="372" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 2 · TAP “FAVOURITE”</text>
+        <path d="M174,175 C210,175 210,90 246,90" fill="none" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
+        <rect x="248" y="66" width="170" height="48" fill="none" stroke="#141414" stroke-width="1.4"/><text x="333" y="88" text-anchor="middle" font-size="12">Tencent official</text><text x="333" y="104" text-anchor="middle" font-size="12">bot channel</text>
+        <line x1="418" y1="90" x2="468" y2="90" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
+        <rect x="470" y="56" width="230" height="290" fill="none" stroke="#141414" stroke-width="2"/>
+        <text x="585" y="80" text-anchor="middle" font-weight="700">OLD MAC AT HOME</text><text x="585" y="97" text-anchor="middle" font-size="11" fill="#6B6660">home connection · fetches articles</text>
+        <rect x="490" y="112" width="190" height="34" fill="#ECE6DC" stroke="#141414"/><text x="585" y="134" text-anchor="middle" font-size="12">inbox  ·  outbox</text>
+        <rect x="490" y="268" width="190" height="56" fill="#ECE6DC" stroke="#141414"/><text x="585" y="291" text-anchor="middle" font-size="12">reads new favourites</text><text x="585" y="309" text-anchor="middle" font-size="12">every ~2 minutes</text>
+        <path d="M174,225 C230,225 230,296 488,296" fill="none" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
+        <rect x="770" y="66" width="246" height="92" fill="#fff" stroke="#FF4F1F" stroke-width="2"/>
+        <text x="893" y="90" text-anchor="middle" font-weight="700" fill="#FF4F1F">MUSE · AI in the cloud</text>
+        <text x="893" y="110" text-anchor="middle" font-size="11.5">checks the inbox every minute</text><text x="893" y="127" text-anchor="middle" font-size="11.5">dates → calendar · article → summary</text><text x="893" y="144" text-anchor="middle" font-size="11" fill="#6B6660">can reach one folder, nothing else</text>
+        <line x1="680" y1="122" x2="768" y2="104" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
+        <line x1="768" y1="138" x2="682" y2="138" stroke="#FF4F1F" stroke-width="1.4" marker-end="url(#a6o)"/>
+        <path d="M490,140 C330,140 300,200 176,200" fill="none" stroke="#FF4F1F" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a6o)"/>
+        <text x="300" y="192" font-size="11.5" fill="#FF4F1F">reply back into the chat</text>
+        <rect x="770" y="248" width="246" height="92" fill="#fff" stroke="#141414" stroke-width="1.6"/>
+        <text x="893" y="272" text-anchor="middle" font-weight="700">KNOWLEDGE BASE</text>
+        <text x="893" y="292" text-anchor="middle" font-size="11.5">my rules first, then a small model</text><text x="893" y="309" text-anchor="middle" font-size="11.5">12 folders · ~1,780 items</text>
+        <line x1="680" y1="296" x2="768" y2="296" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
+      </svg>
+      <figcaption><b>FIG 05.2</b> — Move E. Two streams out of WeChat: forward something and an AI assistant handles it; tap “favourite” and it is filed. The fetching stays on a home connection.</figcaption>
+    </figure>
     <table class="rev"><caption>Revision block</caption>
       <tr><th>Rev</th><th>Date</th><th>Where the tools went</th><th>What forced the move</th></tr>
       <tr><td>A</td><td class="date">2026-10-19</td><td>A shared gateway on my Mac</td><td>Six tools started together and silently hung — 256 file handles</td></tr>
       <tr><td>B</td><td class="date">2026-10-21</td><td>A rented cloud computer</td><td>Work had to continue while the Mac was off</td></tr>
       <tr><td>C</td><td class="date">2026-10-22</td><td>Public entrance removed <span class="stamp">SUPERSEDED</span></td><td>An always-open tunnel kept the machine awake — ≈ 76 € a month</td></tr>
       <tr><td>D</td><td class="date">2026-10-22 → 23</td><td>A free Cloudflare Worker; Mac kept as cold standby</td><td>An assistant that cannot install anything, speaks an older protocol and cannot send headers</td></tr>
+      <tr><td>E</td><td class="date">2026-10-21 → 25</td><td>Into WeChat: a bridge on an old Mac at home, Muse in the cloud</td><td>Life happens in WeChat, and WeChat blocks cloud servers from fetching articles</td></tr>
     </table>
     <div class="sheetblock"><div><span class="k">Project</span>MCP gateway · cloud · Worker</div><div><span class="k">Made for</span>everyone</div><div><span class="k">Date</span>Oct 2026</div><div><span class="k">Sheet</span>05 / 05</div></div>
   </div>
