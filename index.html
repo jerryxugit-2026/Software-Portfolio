@@ -6,85 +6,96 @@
 <title>Made for … | Software by Ziyang Xu</title>
 <meta name="description" content="Five pieces of software by Ziyang Xu, each made for someone: for me, for my mum, for the truth, for the daily job, and for everyone and everywhere. Stories, measurements, failures — and the source.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F6F3EE;--ink:#141414;--muted:#6B6660;--line:#D9D3C9;--accent:#FF4F1F;--tint:#ECE6DC;
-  --serif:'Instrument Serif',Georgia,serif;--sans:'Archivo',system-ui,sans-serif}
+:root{--paper:#FFFFFF;--ink:#111111;--muted:#6B7280;--line:#E5E7EB;--accent:#FF4F1F;--tint:#F5F5F4;
+  --sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.7}
 a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--accent)}
 a:hover{color:var(--accent)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 40px}
-.frame{padding:72px 0 64px;border-top:3px solid var(--ink)}
+.frame{padding:72px 0 64px;border-top:1px solid var(--line)}
 .frame.cover{border-top:none;padding-top:64px}
-.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:34px}
+.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--muted);margin-bottom:34px}
 .strip b{color:var(--accent);font-weight:600}
 .pad{padding:0}
-.cover .kicker{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0}
-.cover h1{font-family:var(--serif);font-weight:400;font-size:clamp(84px,13vw,168px);line-height:.88;margin:10px 0 30px;letter-spacing:-.02em}
+.cover .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--accent);margin:0}
+.cover h1{font-weight:800;font-size:clamp(84px,13vw,168px);line-height:.92;margin:10px 0 30px;letter-spacing:-.045em}
 .cover h1 em{color:var(--accent);font-style:normal}
-.made-list{list-style:none;margin:0 0 40px;padding:0;border-top:3px solid var(--ink)}
-.made-list li{display:grid;grid-template-columns:72px 1fr auto;align-items:baseline;gap:12px;border-bottom:1px solid var(--ink);padding:14px 0}
-.made-list .no{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1}
-.made-list .for{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.01em;line-height:1.2;border:none}
-.made-list .for span{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--muted);font-size:.78em;letter-spacing:0}
-.made-list .what{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right}
+.made-list{list-style:none;margin:0 0 40px;padding:0;border-top:1px solid var(--line)}
+.made-list li{display:grid;grid-template-columns:72px 1fr auto;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}
+.made-list .no{font-family:var(--mono);font-size:30px;font-weight:500;color:var(--accent);line-height:1}
+.made-list .for{font-size:clamp(24px,3vw,34px);font-weight:700;letter-spacing:-.02em;line-height:1.2;border:none}
+.made-list .for span{font-style:italic;font-weight:400;color:var(--muted);font-size:.72em;letter-spacing:-.01em}
+.made-list .what{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
 .made-list li:hover .for{color:var(--accent)}
-.lede{font-family:var(--serif);font-size:clamp(24px,2.6vw,31px);line-height:1.32;max-width:920px;margin:0 0 44px}
-.tblock{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--ink);font-size:14.5px;margin-bottom:0}
+.lede{font-size:clamp(23px,2.6vw,30px);line-height:1.4;max-width:920px;margin:0 0 44px;font-weight:400;letter-spacing:-.015em;color:#1F2937}
+.tblock{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);font-size:14.5px;margin-bottom:0}
 .tblock div{padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
-.tblock .k{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:600;margin-bottom:2px}
+.tblock .k{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;font-weight:500;margin-bottom:2px}
 .tblock .wide{grid-column:span 2}
-.tblock .full{grid-column:1/-1;color:var(--muted);font-style:italic;font-family:var(--serif);font-size:19px}
+.tblock .full{grid-column:1/-1;color:var(--muted);font-style:italic;font-size:17px}
 .numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px}
-.numbers b{display:block;font-size:44px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.numbers b{display:block;font-family:var(--mono);font-size:42px;font-weight:700;line-height:1;letter-spacing:-.03em}
 .numbers a{display:block;border:none;color:var(--ink)}
 .numbers a:hover b{color:var(--accent)}
-.numbers em{display:block;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-top:8px}
-.numbers span{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
-.sheet .made{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0}
-.sheet h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7vw,92px);line-height:.95;margin:8px 0 18px;letter-spacing:-.015em}
-.sheet .sub{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.35;color:var(--muted);max-width:820px;margin:0 0 44px}
+.numbers em{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-top:8px}
+.numbers span{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
+.sheet .made{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--accent);margin:0}
+.sheet h2{font-weight:800;font-size:clamp(46px,7vw,92px);line-height:1;margin:8px 0 18px;letter-spacing:-.04em}
+.sheet .sub{font-style:italic;font-size:23px;line-height:1.4;color:var(--muted);max-width:820px;margin:0 0 44px;font-weight:400;letter-spacing:-.01em}
 .cols{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:56px;align-items:start}
 .story p{margin:0 0 20px}
-.story h3{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin:30px 0 6px}
+.story h3{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:30px 0 6px}
 .story h3:first-child{margin-top:0}
 .story ul{margin:0 0 20px;padding-left:20px}.story li{margin-bottom:8px}
-.story strong{font-weight:700}
-.pull{font-family:var(--serif);font-style:italic;font-size:clamp(28px,3vw,38px);line-height:1.18;margin:30px 0;padding:0;border:none}
-.spec{border-top:3px solid var(--ink);padding-top:14px;font-size:15px}
-.spec .h{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
+.story strong{font-weight:600}
+.pull{font-size:clamp(26px,3vw,36px);line-height:1.25;margin:30px 0;padding:0 0 0 24px;border:none;border-left:3px solid var(--accent);font-weight:600;letter-spacing:-.02em}
+.spec{border-top:1px solid var(--line);padding-top:14px;font-size:15px}
+.spec .h{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
 .spec dl{margin:0}
 .spec .row{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line)}
-.spec dt{color:var(--muted);padding:9px 0}
+.spec dt{color:var(--muted);padding:9px 0;font-family:var(--mono);font-size:13px}
 .spec dd{margin:0;padding:9px 0;line-height:1.5}
-.btns{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin:26px 0 0}
-.btn{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border:none;border-bottom:2px solid var(--ink);padding:2px 0}
-.btn.primary{background:var(--ink);color:var(--paper);padding:13px 22px;border:none}
-.btn.primary:hover{background:var(--accent);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:26px 0 0}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--ink);border:1px solid var(--ink);border-radius:8px;padding:11px 18px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--ink);color:#fff;padding:12px 20px}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 figure{margin:30px 0 0}
-figure img,figure svg{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line)}
+figure img,figure svg{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:10px}
 figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.55}
-figcaption b{color:var(--ink);font-weight:700;letter-spacing:.08em}
+figcaption b{font-family:var(--mono);color:var(--ink);font-weight:600;letter-spacing:.04em}
 .fig-wide{margin-top:44px}
+.console{margin:44px 0 0;border-radius:10px;background:#0D1117;color:#C9D1D9;overflow:hidden}
+.console .bar{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid #1F242C;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8B949E}
+.console .bar i{width:9px;height:9px;border-radius:50%;background:#30363D;display:inline-block}
+.console .bar i.on{background:var(--accent)}
+.console pre{margin:0;padding:18px 20px;font-family:var(--mono);font-size:13.5px;line-height:1.75;overflow-x:auto}
+.console .c{color:#8B949E}.console .k2{color:#79C0FF}.console .s{color:#A5D6FF}.console .hl{color:#FF4F1F;font-weight:600}
 .rev{width:100%;border-collapse:collapse;margin-top:52px;font-size:15px}
-.rev caption{text-align:left;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;padding:0 0 10px;border-bottom:3px solid var(--ink)}
-.rev th{text-align:left;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted);padding:12px 14px 8px 0;border-bottom:1px solid var(--ink)}
+.rev caption{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:0 0 10px;border-bottom:1px solid var(--ink)}
+.rev th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--muted);padding:12px 14px 8px 0;border-bottom:1px solid var(--line)}
 .rev td{padding:12px 14px 12px 0;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.55}
-.rev td:first-child{font-family:var(--serif);font-size:24px;color:var(--accent);line-height:1.1;width:56px}
-.rev .date{white-space:nowrap;font-size:14px;color:var(--muted)}
-.rev.dn td:first-child{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--ink);width:34%;line-height:1.55}
-.stamp{font-size:12.5px;font-weight:800;letter-spacing:.14em;color:var(--accent);border-bottom:2.5px solid var(--accent);margin:0 3px;white-space:nowrap}
+.rev td:first-child{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--accent);line-height:1.3;width:56px}
+.rev .date{white-space:nowrap;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.rev.dn td:first-child{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);width:34%;line-height:1.55}
+.stamp{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.1em;color:var(--accent);border-bottom:2px solid var(--accent);margin:0 3px;white-space:nowrap}
 .stamp.blue{color:var(--ink);border-bottom-color:var(--ink)}
 .sheetblock{display:none}
+.toc{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:-18px 0 34px;line-height:1.9}
+.toc a{border-bottom:1px solid var(--line);color:var(--ink);white-space:nowrap}
+.toc a:hover{color:var(--accent);border-color:var(--accent)}
+.toc .lbl{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;margin-right:8px}
 .notes ol{counter-reset:n;list-style:none;margin:0;padding:0}
-.notes li{counter-increment:n;display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:baseline;border-bottom:1px solid var(--ink);padding:18px 0}
-.notes li::before{content:counter(n,decimal-leading-zero);font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1}
-.notes .t{font-family:var(--serif);font-size:clamp(26px,3vw,38px);line-height:1.15}
-.notes .see{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:right}
-footer{border-top:3px solid var(--ink);font-size:13.5px;color:var(--muted);padding:26px 0 60px;line-height:1.9}
-code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:var(--tint);padding:0 4px}
+.notes li{counter-increment:n;display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:baseline;border-bottom:1px solid var(--line);padding:18px 0}
+.notes li::before{content:counter(n,decimal-leading-zero);font-family:var(--mono);font-size:30px;font-weight:500;color:var(--accent);line-height:1}
+.notes .t{font-size:clamp(24px,3vw,34px);line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.notes .see{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
+footer{border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);padding:26px 0 60px;line-height:1.9}
+code,.mono{font-family:var(--mono);font-size:.9em;background:var(--tint);padding:0 4px;border-radius:4px}
 @media (max-width:900px){
   .wrap{padding:0 22px}
   .cols{grid-template-columns:1fr;gap:36px}
@@ -94,6 +105,8 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
   .notes li{grid-template-columns:48px 1fr}.notes .see{grid-column:2;text-align:left}
   .rev{font-size:13.5px}.rev .date{white-space:normal}.rev td{word-break:break-word}
   .strip{gap:6px 16px}
+  .console pre{font-size:11.5px}
+  .pull{padding-left:16px}
 }
 </style>
 </head>
@@ -106,11 +119,11 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
     <p class="kicker">Five pieces of software, each made for someone</p>
     <h1>Made for <em>…</em></h1>
     <ol class="made-list">
-      <li><span class="no">01</span><a href="#made-for-me" class="for">myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
+      <li><span class="no">01</span><a href="#made-for-me" class="for">Myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
       <li><span class="no">02</span><a href="#made-for-mum" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
-      <li><span class="no">03</span><a href="#made-for-truth" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
-      <li><span class="no">04</span><a href="#made-for-the-daily-job" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
-      <li><span class="no">05</span><a href="#made-for-everyone" class="for">everyone and everywhere <span>— where the tools live, even inside WeChat</span></a><span class="what">gateway · cloud · WeChat</span></li>
+      <li><span class="no">03</span><a href="#made-for-truth" class="for">Truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
+      <li><span class="no">04</span><a href="#made-for-the-daily-job" class="for">The daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
+      <li><span class="no">05</span><a href="#made-for-everyone" class="for">Everyone and everywhere <span>— where the tools live, even inside WeChat</span></a><span class="what">gateway · cloud · WeChat</span></li>
     </ol>
     <p class="lede">Every piece of software here started with someone who needed it. First it was me and my buddies. Then my mum. Then I needed AI to stop telling me confident lies, to do real work without breaking things, and to be reachable from anywhere. Each chapter tells one of those stories — with the measurements, the failures, and the things I deleted.</p>
     <div class="tblock">
@@ -234,12 +247,12 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
           <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 470" role="img" aria-label="Diagram: an agent asks PiMoa; three models review blind in a sandbox; an aggregator combines them; JEV gives a calibrated probability; below 0.7 a human looks" font-family="Archivo, sans-serif" font-size="12">
+          <svg viewBox="0 0 520 470" role="img" aria-label="Diagram: an agent asks PiMoa; three models review blind in a sandbox; an aggregator combines them; JEV gives a calibrated probability; below 0.7 a human looks" font-family="Inter, sans-serif" font-size="12">
             <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="470" fill="#fff"/>
             <rect x="170" y="18" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="43" text-anchor="middle">YOUR AI AGENT</text>
             <line x1="260" y1="58" x2="260" y2="86" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="120" y="88" width="280" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="108" text-anchor="middle" fill="#141414" font-weight="600">PiMoa</text><text x="260" y="124" text-anchor="middle" font-size="10.5">exact files · real line numbers</text>
+            <rect x="120" y="88" width="280" height="44" fill="#F4F4F3" stroke="#141414" stroke-width="1.6"/><text x="260" y="108" text-anchor="middle" fill="#141414" font-weight="600">PiMoa</text><text x="260" y="124" text-anchor="middle" font-size="10.5">exact files · real line numbers</text>
             <rect x="34" y="158" width="452" height="104" fill="none" stroke="#141414" stroke-width="1.4" stroke-dasharray="6 4"/>
             <g stroke="#141414" stroke-width="1.4" fill="#fff"><rect x="58" y="190" width="120" height="50"/><rect x="200" y="190" width="120" height="50"/><rect x="342" y="190" width="120" height="50"/></g>
             <text x="118" y="212" text-anchor="middle">MODEL A</text><text x="260" y="212" text-anchor="middle">MODEL B</text><text x="402" y="212" text-anchor="middle">MODEL C</text>
@@ -248,7 +261,7 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
             <line x1="118" y1="240" x2="230" y2="290" marker-end="url(#a3)"/><line x1="260" y1="240" x2="260" y2="288" marker-end="url(#a3)"/><line x1="402" y1="240" x2="290" y2="290" marker-end="url(#a3)"/></g>
             <rect x="170" y="290" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="315" text-anchor="middle">AGGREGATOR</text>
             <line x1="260" y1="330" x2="260" y2="356" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="150" y="358" width="220" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="378" text-anchor="middle" fill="#141414" font-weight="600">JEV JUDGE</text><text x="260" y="394" text-anchor="middle" font-size="10.5">p = calibrated probability</text>
+            <rect x="150" y="358" width="220" height="44" fill="#F4F4F3" stroke="#141414" stroke-width="1.6"/><text x="260" y="378" text-anchor="middle" fill="#141414" font-weight="600">JEV JUDGE</text><text x="260" y="394" text-anchor="middle" font-size="10.5">p = calibrated probability</text>
             <line x1="200" y1="402" x2="120" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/><line x1="320" y1="402" x2="400" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/>
             <text x="110" y="448" text-anchor="middle">p ≥ 0.7</text><text x="110" y="463" text-anchor="middle" font-size="10.5" fill="#6B6660">verdict + file:line evidence</text>
             <text x="410" y="448" text-anchor="middle" fill="#FF4F1F" font-weight="600">p &lt; 0.7</text><text x="410" y="463" text-anchor="middle" font-size="10.5" fill="#FF4F1F">a human looks</text>
@@ -292,16 +305,16 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
           <div class="row"><dt>office</dt><dd>Python MCP server; routes Word / Excel / PowerPoint jobs to five engines</dd></div>
           <div class="row"><dt>browser</dt><dd>Python MCP server; 4 engines, 145 site adapters</dd></div>
           <div class="row"><dt>Sheet Shadow</dt><dd>Go MCP server; preview before write; save to a new copy; tested against real workbooks</dd></div>
-          <div class="row"><dt>Source</dt><dd>Sheet Shadow: public, MIT. The two gateways: not yet public — they bundle third-party engines whose licences I am still checking.</dd></div>
+          <div class="row"><dt>Source</dt><dd>all three public, MIT: <a href="https://github.com/jerryxugit-2026/Build-Office-Gateway" target="_blank" rel="noopener">office-gateway</a> · <a href="https://github.com/jerryxugit-2026/Build-Browser-Gateway" target="_blank" rel="noopener">browser-gateway</a> · <a href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa/tree/main/sheet_shadow" target="_blank" rel="noopener">Sheet Shadow</a>. The pptx engine inside office-gateway stays external — its upstream is source-available, not open.</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 430" role="img" aria-label="Diagram: an AI agent reaches three doors: office-gateway routing to five Office engines, browser-gateway routing to four web engines, and Sheet Shadow, a hand built from scratch for editing existing workbooks" font-family="Archivo, sans-serif" font-size="11.5">
+          <svg viewBox="0 0 520 430" role="img" aria-label="Diagram: an AI agent reaches three doors: office-gateway routing to five Office engines, browser-gateway routing to four web engines, and Sheet Shadow, a hand built from scratch for editing existing workbooks" font-family="Inter, sans-serif" font-size="11.5">
             <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="430" fill="#fff"/>
             <rect x="180" y="16" width="160" height="38" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="40" text-anchor="middle">AI AGENT</text>
             <g stroke="#141414" stroke-width="1.3"><line x1="220" y1="54" x2="90" y2="92" marker-end="url(#a4)"/><line x1="260" y1="54" x2="260" y2="92" marker-end="url(#a4)"/><line x1="300" y1="54" x2="430" y2="92" marker-end="url(#a4)"/></g>
-            <rect x="14" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="90" y="118" text-anchor="middle" fill="#141414" font-weight="600">office-gateway</text>
-            <rect x="184" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="118" text-anchor="middle" fill="#141414" font-weight="600">browser-gateway</text>
+            <rect x="14" y="94" width="152" height="40" fill="#F4F4F3" stroke="#141414" stroke-width="1.6"/><text x="90" y="118" text-anchor="middle" fill="#141414" font-weight="600">office-gateway</text>
+            <rect x="184" y="94" width="152" height="40" fill="#F4F4F3" stroke="#141414" stroke-width="1.6"/><text x="260" y="118" text-anchor="middle" fill="#141414" font-weight="600">browser-gateway</text>
             <rect x="354" y="94" width="152" height="40" fill="#fff" stroke="#FF4F1F" stroke-width="2"/><text x="430" y="113" text-anchor="middle" fill="#FF4F1F" font-weight="600">Sheet Shadow</text><text x="430" y="127" text-anchor="middle" font-size="9.5" fill="#FF4F1F">built from scratch</text>
             <g font-size="10.5"><g fill="none" stroke="#141414" stroke-width="1"><rect x="14" y="156" width="152" height="30"/><rect x="14" y="192" width="152" height="30"/><rect x="14" y="228" width="152" height="30"/><rect x="14" y="264" width="152" height="30"/><rect x="14" y="300" width="152" height="30"/></g>
             <text x="90" y="175" text-anchor="middle">quick read / edit</text><text x="90" y="211" text-anchor="middle">formula engine</text><text x="90" y="247" text-anchor="middle">lossless repack</text><text x="90" y="283" text-anchor="middle">HTML → slides</text><text x="90" y="319" text-anchor="middle">XML → Word</text>
@@ -319,6 +332,19 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
         </figure>
       </div>
     </div>
+    <div class="console">
+      <div class="bar"><i class="on"></i><i></i><i></i><span>office-gateway · one real job, three steps (paths mocked)</span></div>
+      <pre><span class="c">// 1 — the agent tries to overwrite a cell in a workbook full of formulas</span>
+{ <span class="k2">"action"</span>: <span class="s">"edit_content"</span>, <span class="k2">"file_path"</span>: <span class="s">"…/Q3_report.xlsx"</span> }
+<span class="hl">⮑ [BLOCKED BY GATEWAY]</span> <span class="s">"Do NOT retry identically. Run analyze_formula_impact first."</span>
+
+<span class="c">// 2 — the pre-check shows what the edit would cut</span>
+{ <span class="k2">"action"</span>: <span class="s">"analyze_formula_impact"</span> }
+<span class="s">"impacted_formulas"</span>: [<span class="s">"Summary!D12"</span>, <span class="s">"Summary!F12"</span>]
+
+<span class="c">// 3 — same edit, now precise: two cells, everything else untouched</span>
+{ <span class="k2">"action"</span>: <span class="s">"edit_content"</span> } → <span class="s">"status"</span>: <span class="s">"success"</span> <span class="hl">✓ zero-loss repack</span></pre>
+    </div>
     <figure class="fig-wide"><img src="assets/sheet-shadow-principle.svg" alt="Sheet Shadow principle: the agent edits a shadow model, previews, applies semantic operations, and saves a new copy by targeted patching" loading="lazy"><figcaption><b>FIG 04.2</b> — Sheet Shadow in detail: the original workbook is only touched where a change was intended — and never in place.</figcaption></figure>
     <div class="sheetblock"><div><span class="k">Project</span>office · browser · Sheet Shadow</div><div><span class="k">Made for</span>the daily job</div><div><span class="k">Date</span>2025 – 26</div><div><span class="k">Sheet</span>04 / 05</div></div>
   </div>
@@ -330,26 +356,29 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
     <p class="made">Made for everyone and everywhere</p>
     <h2>Where should the tools live?</h2>
     <p class="sub">The tools moved house four times in one week, each time because something broke. Then they made one last move — into WeChat, where people already are.</p>
+    <p class="toc"><span class="lbl">Chapter map</span><a href="#move-a">A · shared gateway</a><a href="#move-b">B · cloud computer</a><a href="#move-c">C · public door, removed</a><a href="#move-d">D · Cloudflare Worker</a><a href="#move-e">E · into WeChat</a></p>
     <div class="cols">
       <div class="story">
         <p>By October, three AI assistants on my Mac were using these tools. Then I wanted to reach them from my phone while the Mac was off. Then I wanted assistants from other companies to use them too — including one that cannot install anything at all.</p>
-        <h3>Move A · a shared gateway on my Mac</h3>
+        <h3 id="move-a">Move A · a shared gateway on my Mac</h3>
         <p>Each assistant was launching its own copy of every tool, so I built one gateway they all share. One day, six tools started at the same moment and all of them silently hung: macOS gives a background service only 256 file handles. The fix is a single line — <code class="mono">10240</code> — with a comment beside it saying it must never be deleted.</p>
-        <h3>Move B · a rented cloud computer</h3>
+        <h3 id="move-b">Move B · a rented cloud computer</h3>
         <p>To keep working while the Mac sleeps, the same gateway now also runs on a small rented cloud computer, shared by three assistants, behind a private network that only my own devices can join.</p>
-        <h3>Move C · tearing a door down <span class="stamp">SUPERSEDED</span></h3>
+        <h3 id="move-c">Move C · tearing a door down <span class="stamp">SUPERSEDED</span></h3>
         <p>The cloud computer is billed by the minute and sleeps when idle. A permanently open public tunnel counted as activity, so it never slept — about 76 € a month. I tested three ways to get a cheap public entrance; all three were dead ends, and all three are written down so nobody walks them again.</p>
-        <h3>Move D · a free worker on the open internet</h3>
+        <h3 id="move-d">Move D · a free worker on the open internet</h3>
         <p>One assistant cannot install software, speaks an older version of the protocol, and cannot send login headers. So the tools moved to a Cloudflare Worker that speaks both protocol versions and signs in with OAuth. Today it offers 347 abilities — reading the calendar, sending mail, opening files, writing notes — to 10 AI assistants. The local gateway was not deleted: <span class="stamp blue">COLD STANDBY</span></p>
         <p>Moving house carefully is its own skill. One move touched about 40 references across configuration files and scripts. I copied first, checked the copy side by side, switched over in a planned window, watched it for 24 hours, and only then removed the old one — with the rollback practised in advance. It still found a way to break: macOS will not start a background service from an external disk. The fix was to split the layers — the service on the internal disk, the tools wherever they live.</p>
         <p class="pull">The architecture is a fossil record of things that broke.</p>
-        <h3>Move E · into WeChat</h3>
+        <h3 id="move-e">Move E · into WeChat</h3>
         <p>Tools on a server help AI assistants. People live somewhere else — in China, that place is WeChat. Family plans, school notices and the articles worth keeping all arrive there, and none of it ever reached an assistant. So the last move went from inside WeChat to an AI assistant, and back.</p>
         <h3>Forward it, and it is handled</h3>
         <p>Forward a message or an article to a bot in WeChat. A small program on an old Mac at home receives it through Tencent’s official bot channel and drops it into an inbox folder. <strong>Muse</strong> — an AI assistant that lives on its own cloud computer — checks that inbox every minute, puts any dates into the calendar, summarises the article, and writes a reply into an outbox. The program sends the reply back into the same WeChat chat.</p>
         <p>Why an old Mac at home? WeChat blocks article requests that come from cloud servers. So the fetching happens on a home connection, and the assistant in the cloud only ever reads the saved text. It can reach exactly one folder on that Mac — nothing else.</p>
         <h3>Tap “favourite”, and it is filed</h3>
         <p>The second stream needs no action at all. When I tap “favourite” on an article — a habit I already had — it appears in a knowledge base about two minutes later, sorted into one of 12 folders: by my own rules first, and by a small language model when no rule fits. It now holds about 1,780 items. Forward a WeChat video post to the bot, and it goes straight into the same knowledge base, with a ✅ in the chat.</p>
+        <h3>Ask it, and it answers from my own reading</h3>
+        <p>A knowledge base you cannot ask is just a drawer. So the same corpus gets a personal RAG layer. The full text of every article stays on my own machine as Markdown — the master copy, beyond any app’s lock-in — and a SQLite index recalls candidates two ways: BM25 for exact keywords, multilingual text embeddings for meaning. A small cross-encoder reranker (a qwen3 reranking model) re-sorts the merged list, and the language model I point it at answers with the sources attached. The stack degrades gracefully: if the embedding service is down, keyword search still answers — nothing in the pipeline blocks.</p>
         <h3>Written down: what does not work</h3>
         <p>The bot channel does not deliver merged chat-history cards, so the bot politely asks for messages one at a time. Image-only posts have no text, so it asks for a screenshot. Favourited images and files carry no link, so they cannot be filed <span class="stamp">DEAD END</span> — recorded as one. A reply can never be sent twice: one running copy, a duplicate check, and an atomic claim on every reply. And the honest weak point: the old Mac has to stay on. A plan to move it onto a cloud computer is written down and waiting.</p>
         <p class="pull">The best interface is the one people already use every day.</p>
@@ -362,11 +391,11 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
           <div class="row"><dt>Protocol</dt><dd>MCP 2026-07-28 in front; older tools behind, started only when needed</dd></div>
           <div class="row"><dt>Cost</dt><dd>Cloudflare free tier; the cloud computer sleeps when idle</dd></div>
           <div class="row"><dt>Security</dt><dd>private network with an access list; OAuth; every account, key and password in the public source is a mock</dd></div>
-          <div class="row"><dt>WeChat</dt><dd>forward → handled in about a minute; favourite → filed in about two minutes; ~1,780 items in 12 folders</dd></div>
-          <div class="row"><dt>Licence</dt><dd>MIT (gateway &amp; Worker). The WeChat bridge is built on a third-party open-source bridge and is not yet public.</dd></div>
+          <div class="row"><dt>WeChat</dt><dd>forward → handled in about a minute; favourite → filed in about two minutes; ~1,780 items in 12 folders; retrieval = BM25 + embeddings → cross-encoder rerank</dd></div>
+          <div class="row"><dt>Licence</dt><dd>MIT: <a href="https://github.com/jerryxugit-2026/Build-MCP-Gateway" target="_blank" rel="noopener">gateway &amp; Worker</a> — and the WeChat bridge too, a fork of the open-source dorokuma/wechatbridge with my own backend added: <a href="https://github.com/jerryxugit-2026/Build-WeChat-Bridge" target="_blank" rel="noopener">Build-WeChat-Bridge</a>.</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="Archivo, sans-serif" font-size="11.5">
+          <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="Inter, sans-serif" font-size="11.5">
             <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="520" fill="#fff"/>
             <g font-size="10.5" fill="#6B6660"><text x="80" y="10">REV A</text><text x="80" y="120">REV B</text><text x="80" y="230">REV C</text><text x="80" y="340">REV D</text></g>
@@ -377,7 +406,7 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
             <rect x="80" y="234" width="200" height="66" fill="none" stroke="#FF4F1F" stroke-width="1.6" stroke-dasharray="6 4"/><text x="180" y="258" text-anchor="middle" font-weight="600" fill="#FF4F1F">PUBLIC TUNNEL</text><text x="180" y="276" text-anchor="middle" font-size="10.5" fill="#FF4F1F">never sleeps · ≈76 € / month</text>
             <line x1="90" y1="240" x2="270" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/><line x1="270" y1="240" x2="90" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/>
             <line x1="180" y1="300" x2="180" y2="342" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="344" width="200" height="74" fill="#ECE6DC" stroke="#141414" stroke-width="1.8"/><text x="180" y="368" text-anchor="middle" font-weight="600" fill="#141414">CLOUDFLARE WORKER</text><text x="180" y="386" text-anchor="middle" font-size="10.5">free · 2 protocols · OAuth</text><text x="180" y="404" text-anchor="middle" font-size="10.5">11 endpoints · 347 tools</text>
+            <rect x="80" y="344" width="200" height="74" fill="#F4F4F3" stroke="#141414" stroke-width="1.8"/><text x="180" y="368" text-anchor="middle" font-weight="600" fill="#141414">CLOUDFLARE WORKER</text><text x="180" y="386" text-anchor="middle" font-size="10.5">free · 2 protocols · OAuth</text><text x="180" y="404" text-anchor="middle" font-size="10.5">11 endpoints · 347 tools</text>
             <g stroke="#141414" stroke-width="1.2"><line x1="280" y1="372" x2="352" y2="330" marker-end="url(#a5)"/><line x1="280" y1="381" x2="352" y2="381" marker-end="url(#a5)"/><line x1="280" y1="390" x2="352" y2="432" marker-end="url(#a5)"/></g>
             <g fill="none" stroke="#141414" stroke-width="1"><rect x="354" y="314" width="150" height="30"/><rect x="354" y="366" width="150" height="30"/><rect x="354" y="418" width="150" height="30"/></g>
             <g font-size="10.5" text-anchor="middle"><text x="429" y="333">assistants on Mac</text><text x="429" y="385">assistants in cloud</text><text x="429" y="437">other companies’ AIs</text></g>
@@ -390,11 +419,11 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
       </div>
     </div>
     <figure class="fig-wide">
-      <svg viewBox="0 0 1040 400" role="img" aria-label="Diagram: two streams from WeChat. Forward a message: Tencent bot channel to a bridge on an old Mac at home, inbox, Muse AI assistant in the cloud checks every minute, writes calendar and summary, reply goes back to WeChat. Tap favourite: the old Mac reads new favourites every two minutes, rules then a small language model sort them into a knowledge base with 12 folders and about 1,780 items." font-family="Archivo, sans-serif" font-size="13">
+      <svg viewBox="0 0 1040 400" role="img" aria-label="Diagram: two streams from WeChat. Forward a message: Tencent bot channel to a bridge on an old Mac at home, inbox, Muse AI assistant in the cloud checks every minute, writes calendar and summary, reply goes back to WeChat. Tap favourite: the old Mac reads new favourites every two minutes, rules then a small language model sort them into a knowledge base with 12 folders and about 1,780 items, retrieved by keyword and embeddings, re-ranked, then answered with sources." font-family="Inter, sans-serif" font-size="13">
         <defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker>
         <marker id="a6o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF4F1F"/></marker></defs>
         <rect x="0" y="0" width="1040" height="400" fill="#fff"/>
-        <rect x="24" y="150" width="150" height="100" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/>
+        <rect x="24" y="150" width="150" height="100" fill="#F4F4F3" stroke="#141414" stroke-width="1.6"/>
         <text x="99" y="192" text-anchor="middle" font-weight="700">WeChat</text><text x="99" y="212" text-anchor="middle" font-size="11.5" fill="#6B6660">on my phone</text>
         <text x="240" y="44" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 1 · FORWARD IT</text>
         <text x="240" y="372" font-size="11" letter-spacing="2" fill="#FF4F1F" font-weight="700">STREAM 2 · TAP “FAVOURITE”</text>
@@ -403,8 +432,8 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
         <line x1="418" y1="90" x2="468" y2="90" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
         <rect x="470" y="56" width="230" height="290" fill="none" stroke="#141414" stroke-width="2"/>
         <text x="585" y="80" text-anchor="middle" font-weight="700">OLD MAC AT HOME</text><text x="585" y="97" text-anchor="middle" font-size="11" fill="#6B6660">home connection · fetches articles</text>
-        <rect x="490" y="112" width="190" height="34" fill="#ECE6DC" stroke="#141414"/><text x="585" y="134" text-anchor="middle" font-size="12">inbox  ·  outbox</text>
-        <rect x="490" y="268" width="190" height="56" fill="#ECE6DC" stroke="#141414"/><text x="585" y="291" text-anchor="middle" font-size="12">reads new favourites</text><text x="585" y="309" text-anchor="middle" font-size="12">every ~2 minutes</text>
+        <rect x="490" y="112" width="190" height="34" fill="#F4F4F3" stroke="#141414"/><text x="585" y="134" text-anchor="middle" font-size="12">inbox  ·  outbox</text>
+        <rect x="490" y="268" width="190" height="56" fill="#F4F4F3" stroke="#141414"/><text x="585" y="291" text-anchor="middle" font-size="12">reads new favourites</text><text x="585" y="309" text-anchor="middle" font-size="12">every ~2 minutes</text>
         <path d="M174,225 C230,225 230,296 488,296" fill="none" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
         <rect x="770" y="66" width="246" height="92" fill="#fff" stroke="#FF4F1F" stroke-width="2"/>
         <text x="893" y="90" text-anchor="middle" font-weight="700" fill="#FF4F1F">MUSE · AI in the cloud</text>
@@ -414,11 +443,13 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
         <path d="M490,140 C330,140 300,200 176,200" fill="none" stroke="#FF4F1F" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#a6o)"/>
         <text x="300" y="192" font-size="11.5" fill="#FF4F1F">reply back into the chat</text>
         <rect x="770" y="248" width="246" height="92" fill="#fff" stroke="#141414" stroke-width="1.6"/>
-        <text x="893" y="272" text-anchor="middle" font-weight="700">KNOWLEDGE BASE</text>
-        <text x="893" y="292" text-anchor="middle" font-size="11.5">my rules first, then a small model</text><text x="893" y="309" text-anchor="middle" font-size="11.5">12 folders · ~1,780 items</text>
+        <text x="893" y="270" text-anchor="middle" font-size="12.5" font-weight="700">KNOWLEDGE BASE · PERSONAL RAG</text>
+        <text x="893" y="288" text-anchor="middle" font-size="11">my rules first, then a small model</text>
+        <text x="893" y="305" text-anchor="middle" font-size="11" fill="#FF4F1F" font-weight="600">BM25 + embeddings → rerank → answer</text>
+        <text x="893" y="322" text-anchor="middle" font-size="11">12 folders · ~1,780 items</text>
         <line x1="680" y1="296" x2="768" y2="296" stroke="#141414" stroke-width="1.4" marker-end="url(#a6)"/>
       </svg>
-      <figcaption><b>FIG 05.2</b> — Move E. Two streams out of WeChat: forward something and an AI assistant handles it; tap “favourite” and it is filed. The fetching stays on a home connection.</figcaption>
+      <figcaption><b>FIG 05.2</b> — Move E. Two streams out of WeChat: forward something and an AI assistant handles it; tap “favourite” and it is filed — into a personal RAG: two-way recall, a reranker, answers with sources. The fetching stays on a home connection.</figcaption>
     </figure>
     <table class="rev"><caption>Revision block</caption>
       <tr><th>Rev</th><th>Date</th><th>Where the tools went</th><th>What forced the move</th></tr>
@@ -426,7 +457,7 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
       <tr><td>B</td><td class="date">2026-10-21</td><td>A rented cloud computer</td><td>Work had to continue while the Mac was off</td></tr>
       <tr><td>C</td><td class="date">2026-10-22</td><td>Public entrance removed <span class="stamp">SUPERSEDED</span></td><td>An always-open tunnel kept the machine awake — ≈ 76 € a month</td></tr>
       <tr><td>D</td><td class="date">2026-10-22 → 23</td><td>A free Cloudflare Worker; Mac kept as cold standby</td><td>An assistant that cannot install anything, speaks an older protocol and cannot send headers</td></tr>
-      <tr><td>E</td><td class="date">2026-10-21 → 25</td><td>Into WeChat: a bridge on an old Mac at home, Muse in the cloud</td><td>Life happens in WeChat, and WeChat blocks cloud servers from fetching articles</td></tr>
+      <tr><td>E</td><td class="date">2026-10-21 → 25</td><td>Into WeChat: a bridge on an old Mac at home, Muse in the cloud — plus a personal RAG over the corpus</td><td>Life happens in WeChat, and WeChat blocks cloud servers from fetching articles</td></tr>
     </table>
     <div class="sheetblock"><div><span class="k">Project</span>MCP gateway · cloud · Worker</div><div><span class="k">Made for</span>everyone</div><div><span class="k">Date</span>Oct 2026</div><div><span class="k">Sheet</span>05 / 05</div></div>
   </div>
@@ -445,7 +476,7 @@ code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:v
 </section>
 
 <footer>
-  Source: <a href="https://github.com/jerryxugit-2026/Build-Vocab-Master">Build-Vocab-Master</a> · <a href="https://github.com/jerryxugit-2026/dsh-web-companion">dsh-web-companion</a> · <a href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa">Build-Agent-Tools-PiMoa</a> (PiMoa, JEV, Sheet Shadow) · <a href="https://github.com/jerryxugit-2026/Build-MCP-Gateway">Build-MCP-Gateway</a><br>
+  Source: <a href="https://github.com/jerryxugit-2026/Build-Vocab-Master">Build-Vocab-Master</a> · <a href="https://github.com/jerryxugit-2026/dsh-web-companion">dsh-web-companion</a> · <a href="https://github.com/jerryxugit-2026/Build-Agent-Tools-PiMoa">Build-Agent-Tools-PiMoa</a> (PiMoa, JEV, Sheet Shadow) · <a href="https://github.com/jerryxugit-2026/Build-MCP-Gateway">Build-MCP-Gateway</a> · <a href="https://github.com/jerryxugit-2026/Build-Office-Gateway">Build-Office-Gateway</a> · <a href="https://github.com/jerryxugit-2026/Build-Browser-Gateway">Build-Browser-Gateway</a> · <a href="https://github.com/jerryxugit-2026/Build-WeChat-Bridge">Build-WeChat-Bridge</a><br>
   Every account, key and password in the published source is a mock.<br>
   © 2026 Ziyang Xu · <a href="#top">back to the cover ↑</a>
 </footer>
