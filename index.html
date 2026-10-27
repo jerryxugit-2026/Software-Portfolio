@@ -6,126 +6,91 @@
 <title>Made for … | Software by Ziyang Xu</title>
 <meta name="description" content="Five pieces of software by Ziyang Xu, each made for someone: for me, for my mum, for the truth, for the daily job, and for everywhere and everyone. Stories, measurements, failures — and the source.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#F3F0E8; --sheet:#FBFAF6; --grid:rgba(31,79,168,.075); --grid2:rgba(31,79,168,.13);
-  --ink:#1B1F2A; --muted:#5A6070; --blue:#1F4FA8; --blue-soft:#E3EAF7; --red:#C2382C; --rule:#1B1F2A;
-  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace; --sans:'IBM Plex Sans',system-ui,sans-serif;
-}
+:root{--paper:#F6F3EE;--ink:#141414;--muted:#6B6660;--line:#D9D3C9;--accent:#FF4F1F;--tint:#ECE6DC;
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Archivo',system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.72;
-  background-color:var(--paper);
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),
-                   linear-gradient(var(--grid2) 1px,transparent 1px),linear-gradient(90deg,var(--grid2) 1px,transparent 1px);
-  background-size:24px 24px,24px 24px,120px 120px,120px 120px;}
-a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,79,168,.35)}
-a:hover{border-bottom-color:var(--blue)}
-.mono{font-family:var(--mono)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-
-.frame{position:relative;background:var(--sheet);border:2px solid var(--rule);outline:1px solid var(--rule);outline-offset:6px;margin:56px auto;}
-.frame::before,.frame::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--rule);}
-.frame::before{top:-12px;left:-12px;border-right:none;border-bottom:none}
-.frame::after{bottom:-12px;right:-12px;border-left:none;border-top:none}
-.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--rule);
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;padding:10px 22px}
-.strip b{font-weight:600}
-.pad{padding:34px 40px 30px}
-
-.cover .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
-.cover h1{font-size:clamp(54px,9vw,112px);line-height:.95;margin:0 0 6px;font-weight:700;letter-spacing:-.02em}
-.made-list{list-style:none;margin:18px 0 26px;padding:0;border-top:1px solid var(--rule)}
-.made-list li{display:grid;grid-template-columns:76px 1fr auto;align-items:baseline;gap:14px;border-bottom:1px solid var(--rule);padding:10px 0}
-.made-list .no{font-family:var(--mono);font-size:13px;color:var(--muted)}
-.made-list .for{font-size:clamp(22px,3vw,32px);font-weight:600;line-height:1.2}
-.made-list .for span{color:var(--muted);font-weight:400}
-.made-list .what{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:right}
-.made-list a{border:none;color:inherit}
-.made-list li:hover .for{color:var(--blue)}
-.lede{font-size:19px;max-width:820px;margin:0 0 30px}
-.tblock{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--rule);font-family:var(--mono);font-size:12.5px}
-.tblock div{padding:10px 12px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.tblock div:nth-child(2n){border-right:none}
-.tblock .k{display:block;font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-bottom:2px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.7}
+a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--accent)}
+a:hover{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.frame{padding:72px 0 64px;border-top:3px solid var(--ink)}
+.frame.cover{border-top:none;padding-top:64px}
+.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:34px}
+.strip b{color:var(--accent);font-weight:600}
+.pad{padding:0}
+.cover .kicker{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0}
+.cover h1{font-family:var(--serif);font-weight:400;font-size:clamp(84px,13vw,168px);line-height:.88;margin:10px 0 30px;letter-spacing:-.02em}
+.cover h1 em{color:var(--accent);font-style:normal}
+.made-list{list-style:none;margin:0 0 40px;padding:0;border-top:3px solid var(--ink)}
+.made-list li{display:grid;grid-template-columns:72px 1fr auto;align-items:baseline;gap:12px;border-bottom:1px solid var(--ink);padding:14px 0}
+.made-list .no{font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1}
+.made-list .for{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.01em;line-height:1.2;border:none}
+.made-list .for span{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--muted);font-size:.78em;letter-spacing:0}
+.made-list .what{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right}
+.made-list li:hover .for{color:var(--accent)}
+.lede{font-family:var(--serif);font-size:clamp(24px,2.6vw,31px);line-height:1.32;max-width:920px;margin:0 0 44px}
+.tblock{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--ink);font-size:14.5px;margin-bottom:0}
+.tblock div{padding:12px 16px 12px 0;border-bottom:1px solid var(--line)}
+.tblock .k{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:600;margin-bottom:2px}
 .tblock .wide{grid-column:span 2}
-.tblock .full{grid-column:1/-1;border-right:none;border-bottom:none}
-.numbers{display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--rule);border-top:none}
-.numbers div{padding:14px 12px;border-right:1px solid var(--rule)}
-.numbers div:last-child{border-right:none}
-.numbers b{display:block;font-family:var(--mono);font-size:22px;font-weight:600;color:var(--blue);line-height:1.2}
-.numbers span{font-size:12.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
-
-.sheet h2{font-size:clamp(32px,4.6vw,52px);line-height:1.08;margin:6px 0 10px;letter-spacing:-.015em}
-.sheet .made{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin:0}
-.sheet .sub{font-size:19px;color:var(--muted);max-width:760px;margin:0 0 28px}
-.cols{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:40px;align-items:start}
-.story p{margin:0 0 16px}
-.story h3{font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin:24px 0 6px;font-weight:600}
+.tblock .full{grid-column:1/-1;color:var(--muted);font-style:italic;font-family:var(--serif);font-size:19px}
+.numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:40px}
+.numbers b{display:block;font-size:44px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.numbers span{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
+.sheet .made{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0}
+.sheet h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7vw,92px);line-height:.95;margin:8px 0 18px;letter-spacing:-.015em}
+.sheet .sub{font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.35;color:var(--muted);max-width:820px;margin:0 0 44px}
+.cols{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:56px;align-items:start}
+.story p{margin:0 0 20px}
+.story h3{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin:30px 0 6px}
 .story h3:first-child{margin-top:0}
-.story ul{margin:0 0 16px;padding-left:20px}
-.story li{margin-bottom:6px}
-.pull{border-left:4px solid var(--blue);padding:6px 0 6px 18px;margin:22px 0;font-size:21px;font-style:italic;line-height:1.5}
-.spec{border:2px solid var(--rule);font-size:14.5px;background:#fff}
-.spec .h{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;border-bottom:2px solid var(--rule);padding:8px 14px;background:var(--blue-soft)}
+.story ul{margin:0 0 20px;padding-left:20px}.story li{margin-bottom:8px}
+.story strong{font-weight:700}
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(28px,3vw,38px);line-height:1.18;margin:30px 0;padding:0;border:none}
+.spec{border-top:3px solid var(--ink);padding-top:14px;font-size:15px}
+.spec .h{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
 .spec dl{margin:0}
-.spec .row{display:grid;grid-template-columns:104px 1fr;border-bottom:1px solid #cfcabd}
-.spec .row:last-child{border-bottom:none}
-.spec dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:9px 0 9px 14px}
-.spec dd{margin:0;padding:8px 14px 8px 0;line-height:1.5}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
-.btn{font-family:var(--mono);font-size:13px;letter-spacing:.06em;border:2px solid var(--rule);padding:9px 14px;color:var(--ink);background:#fff}
-.btn:hover{background:var(--ink);color:var(--sheet);border-bottom-color:var(--rule)}
-.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-.btn.primary:hover{background:var(--ink);border-color:var(--ink)}
-figure{margin:24px 0 0}
-figure img,figure svg{display:block;width:100%;height:auto;border:1px solid var(--rule);background:#fff}
-figcaption{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px;line-height:1.55}
-figcaption b{color:var(--ink);font-weight:600}
-.fig-wide{margin-top:32px}
-
-.rev{width:100%;border-collapse:collapse;margin-top:34px;font-size:14.5px;background:#fff}
-.rev caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:0 0 8px;color:var(--muted)}
-.rev th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:left;background:var(--blue-soft);border:1px solid var(--rule);padding:8px 10px}
-.rev td{border:1px solid var(--rule);padding:9px 10px;vertical-align:top;line-height:1.55}
-.rev td:first-child{font-family:var(--mono);font-weight:600;white-space:nowrap}
-.rev .date{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
-
-.stamp{display:inline-block;font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--red);
-  border:2.5px solid var(--red);padding:2px 9px;transform:rotate(-4deg);margin:0 4px;vertical-align:2px;opacity:.92;
-  box-shadow:inset 0 0 0 1px rgba(194,56,44,.25)}
-.stamp.blue{color:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 1px rgba(31,79,168,.25)}
-
-.sheetblock{display:grid;grid-template-columns:1.4fr 1fr 1fr .8fr;border:2px solid var(--rule);margin:34px 0 0 auto;max-width:620px;font-family:var(--mono);font-size:12px;background:#fff}
-.sheetblock div{padding:8px 10px;border-right:1px solid var(--rule)}
-.sheetblock div:last-child{border-right:none}
-.sheetblock .k{display:block;font-size:10px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
-
-.notes ol{counter-reset:n;list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-.notes li{counter-increment:n;display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:baseline;border-bottom:1px solid var(--rule);padding:14px 0}
-.notes li::before{content:counter(n,decimal-leading-zero);font-family:var(--mono);color:var(--muted)}
-.notes .t{font-size:clamp(20px,2.6vw,27px);font-weight:600;line-height:1.25}
-.notes .see{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:right}
-footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:center;padding:10px 20px 50px;line-height:1.8}
-
+.spec .row{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--line)}
+.spec dt{color:var(--muted);padding:9px 0}
+.spec dd{margin:0;padding:9px 0;line-height:1.5}
+.btns{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin:26px 0 0}
+.btn{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border:none;border-bottom:2px solid var(--ink);padding:2px 0}
+.btn.primary{background:var(--ink);color:var(--paper);padding:13px 22px;border:none}
+.btn.primary:hover{background:var(--accent);color:#fff}
+figure{margin:30px 0 0}
+figure img,figure svg{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.55}
+figcaption b{color:var(--ink);font-weight:700;letter-spacing:.08em}
+.fig-wide{margin-top:44px}
+.rev{width:100%;border-collapse:collapse;margin-top:52px;font-size:15px}
+.rev caption{text-align:left;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;padding:0 0 10px;border-bottom:3px solid var(--ink)}
+.rev th{text-align:left;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted);padding:12px 14px 8px 0;border-bottom:1px solid var(--ink)}
+.rev td{padding:12px 14px 12px 0;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.55}
+.rev td:first-child{font-family:var(--serif);font-size:24px;color:var(--accent);line-height:1.1;width:56px}
+.rev .date{white-space:nowrap;font-size:14px;color:var(--muted)}
+.rev.dn td:first-child{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--ink);width:34%;line-height:1.55}
+.stamp{font-size:12.5px;font-weight:800;letter-spacing:.14em;color:var(--accent);border-bottom:2.5px solid var(--accent);margin:0 3px;white-space:nowrap}
+.stamp.blue{color:var(--ink);border-bottom-color:var(--ink)}
+.sheetblock{display:none}
+.notes ol{counter-reset:n;list-style:none;margin:0;padding:0}
+.notes li{counter-increment:n;display:grid;grid-template-columns:72px 1fr auto;gap:16px;align-items:baseline;border-bottom:1px solid var(--ink);padding:18px 0}
+.notes li::before{content:counter(n,decimal-leading-zero);font-family:var(--serif);font-size:34px;color:var(--accent);line-height:1}
+.notes .t{font-family:var(--serif);font-size:clamp(26px,3vw,38px);line-height:1.15}
+.notes .see{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:right}
+footer{border-top:3px solid var(--ink);font-size:13.5px;color:var(--muted);padding:26px 0 60px;line-height:1.9}
+code,.mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:var(--tint);padding:0 4px}
 @media (max-width:900px){
-  .cols{grid-template-columns:1fr}
-  .tblock{grid-template-columns:1fr}
-  .tblock .wide{grid-column:auto}
-  .tblock div{border-right:none}
+  .wrap{padding:0 22px}
+  .cols{grid-template-columns:1fr;gap:36px}
+  .tblock{grid-template-columns:1fr}.tblock .wide{grid-column:auto}
   .numbers{grid-template-columns:1fr 1fr}
-  .numbers div{border-bottom:1px solid var(--rule)}
-  .made-list li{grid-template-columns:52px 1fr}
-  .made-list .what{grid-column:2;text-align:left}
-  .pad{padding:26px 20px 24px}
-  .sheetblock{grid-template-columns:1fr 1fr}
-  .notes li{grid-template-columns:44px 1fr}
-  .notes .see{grid-column:2;text-align:left}
-  .rev{font-size:13px}
-  .rev th,.rev td{padding:7px 6px}
-  .rev .date{white-space:normal}
-  .rev td{word-break:break-word}
+  .made-list li{grid-template-columns:48px 1fr}.made-list .what{grid-column:2;text-align:left}
+  .notes li{grid-template-columns:48px 1fr}.notes .see{grid-column:2;text-align:left}
+  .rev{font-size:13.5px}.rev .date{white-space:normal}.rev td{word-break:break-word}
+  .strip{gap:6px 16px}
 }
 </style>
 </head>
@@ -133,37 +98,37 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 <div class="wrap">
 
 <header class="frame cover" id="top">
-  <div class="strip"><span><b>Software</b> · drawing set</span><span>5 sheets · 2024 – 2026</span><span>Ziyang Xu</span></div>
+  <div class="strip"><span><b>Software</b> · a portfolio in five stories</span><span>2024 – 2026</span><span>Ziyang Xu</span></div>
   <div class="pad">
     <p class="kicker">Five pieces of software, each made for someone</p>
-    <h1>Made for …</h1>
+    <h1>Made for <em>…</em></h1>
     <ol class="made-list">
-      <li><span class="no">SHEET 01</span><a href="#made-for-me" class="for">myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
-      <li><span class="no">SHEET 02</span><a href="#made-for-mum" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
-      <li><span class="no">SHEET 03</span><a href="#made-for-truth" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
-      <li><span class="no">SHEET 04</span><a href="#made-for-the-daily-job" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
-      <li><span class="no">SHEET 05</span><a href="#made-for-everyone" class="for">everywhere and everyone <span>— where the tools live</span></a><span class="what">MCP gateway · cloud · Worker</span></li>
+      <li><span class="no">01</span><a href="#made-for-me" class="for">myself and my buddies <span>— a study tool</span></a><span class="what">Ziyang Vocab Master</span></li>
+      <li><span class="no">02</span><a href="#made-for-mum" class="for">Mum <span>— a browser assistant she can use</span></a><span class="what">DSH Browser Companion</span></li>
+      <li><span class="no">03</span><a href="#made-for-truth" class="for">truth <span>— models that check each other</span></a><span class="what">PiMoa + JEV</span></li>
+      <li><span class="no">04</span><a href="#made-for-the-daily-job" class="for">the daily job <span>— hands for an AI agent</span></a><span class="what">office · browser · Sheet Shadow</span></li>
+      <li><span class="no">05</span><a href="#made-for-everyone" class="for">everywhere and everyone <span>— where the tools live</span></a><span class="what">MCP gateway · cloud · Worker</span></li>
     </ol>
-    <p class="lede">Every piece of software here started with someone who needed it. First it was me and my buddies. Then my mum. Then I needed AI to stop telling me confident lies, to do real work without breaking things, and to be reachable from anywhere. Each sheet tells one of those stories — with the measurements, the failures, and the things I deleted.</p>
+    <p class="lede">Every piece of software here started with someone who needed it. First it was me and my buddies. Then my mum. Then I needed AI to stop telling me confident lies, to do real work without breaking things, and to be reachable from anywhere. Each chapter tells one of those stories — with the measurements, the failures, and the things I deleted.</p>
     <div class="tblock">
-      <div class="wide"><span class="k">Drawn by</span>Ziyang Xu (Jerry)</div>
+      <div class="wide"><span class="k">Written &amp; built by</span>Ziyang Xu (Jerry)</div>
       <div class="wide"><span class="k">Checked by</span>three models and a calibrated judge</div>
       <div class="wide"><span class="k">School</span>The Experimental High School Attached to Beijing Normal University</div>
       <div class="wide"><span class="k">Source</span>public on GitHub · <a href="https://github.com/jerryxugit-2026">github.com/jerryxugit-2026</a></div>
       <div class="full"><span class="k">Note</span>Every account, key and password in the published source is a mock. Real credentials never leave my machine.</div>
     </div>
     <div class="numbers">
-      <div><b>®</b><span>registered software copyright — SHEET 01</span></div>
-      <div><b>3 steps</b><span>to install, no compiler — SHEET 02</span></div>
-      <div><b>96.1 %</b><span>right when the judge says it is ≥ 0.99 sure — SHEET 03</span></div>
-      <div><b>145</b><span>website adapters behind one browser door — SHEET 04</span></div>
-      <div><b>347</b><span>tools served to 10 AI assistants — SHEET 05</span></div>
+      <div><b>®</b><span>registered software copyright — No. 01</span></div>
+      <div><b>3 steps</b><span>to install, no compiler — No. 02</span></div>
+      <div><b>96.1 %</b><span>right when the judge says it is ≥ 0.99 sure — No. 03</span></div>
+      <div><b>145</b><span>website adapters behind one browser door — No. 04</span></div>
+      <div><b>347</b><span>tools served to 10 AI assistants — No. 05</span></div>
     </div>
   </div>
 </header>
 
 <section class="frame sheet" id="made-for-me">
-  <div class="strip"><span><b>Sheet 01</b> / 05</span><span>Made for myself and my buddies</span><span>2024</span></div>
+  <div class="strip"><span><b>No. 01</b> / 05</span><span>Made for myself and my buddies</span><span>2024</span></div>
   <div class="pad">
     <p class="made">Made for myself and my buddies</p>
     <h2>The list nobody made for me</h2>
@@ -194,7 +159,7 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 </section>
 
 <section class="frame sheet" id="made-for-mum">
-  <div class="strip"><span><b>Sheet 02</b> / 05</span><span>Made for Mum</span><span>2026</span></div>
+  <div class="strip"><span><b>No. 02</b> / 05</span><span>Made for Mum</span><span>2026</span></div>
   <div class="pad">
     <p class="made">Made for Mum</p>
     <h2>My mum couldn’t use it</h2>
@@ -224,7 +189,7 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
         <figure><img src="assets/panel.png" alt="DSH Browser Companion side panel with buttons to attach the page, attach a selection, enable browser control and enable write actions" loading="lazy"><figcaption><b>FIG 02.1</b> — The side panel. Write actions sit behind their own switch.</figcaption></figure>
       </div>
     </div>
-    <table class="rev"><caption>Design notes — requirement → decision</caption>
+    <table class="rev dn"><caption>Design notes — requirement → decision</caption>
       <tr><th>Requirement</th><th>Decision</th></tr>
       <tr><td>Works in China</td><td>Built on DeepSeek, not on ChatGPT or Gemini</td></tr>
       <tr><td>Her pages stay private</td><td>The agent runs on our own computer</td></tr>
@@ -236,7 +201,7 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 </section>
 
 <section class="frame sheet" id="made-for-truth">
-  <div class="strip"><span><b>Sheet 03</b> / 05</span><span>Made for truth</span><span>2025 – 2026</span></div>
+  <div class="strip"><span><b>No. 03</b> / 05</span><span>Made for truth</span><span>2025 – 2026</span></div>
   <div class="pad">
     <p class="made">Made for truth</p>
     <h2>The model that said “looks fine”</h2>
@@ -266,25 +231,25 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
           <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 470" role="img" aria-label="Diagram: an agent asks PiMoa; three models review blind in a sandbox; an aggregator combines them; JEV gives a calibrated probability; below 0.7 a human looks" font-family="IBM Plex Mono, monospace" font-size="12">
-            <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1B1F2A"/></marker></defs>
+          <svg viewBox="0 0 520 470" role="img" aria-label="Diagram: an agent asks PiMoa; three models review blind in a sandbox; an aggregator combines them; JEV gives a calibrated probability; below 0.7 a human looks" font-family="Archivo, sans-serif" font-size="12">
+            <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="470" fill="#fff"/>
-            <rect x="170" y="18" width="180" height="40" fill="none" stroke="#1B1F2A" stroke-width="1.6"/><text x="260" y="43" text-anchor="middle">YOUR AI AGENT</text>
-            <line x1="260" y1="58" x2="260" y2="86" stroke="#1B1F2A" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="120" y="88" width="280" height="44" fill="#E3EAF7" stroke="#1F4FA8" stroke-width="1.6"/><text x="260" y="108" text-anchor="middle" fill="#1F4FA8" font-weight="600">PiMoa</text><text x="260" y="124" text-anchor="middle" font-size="10.5">exact files · real line numbers</text>
-            <rect x="34" y="158" width="452" height="104" fill="none" stroke="#1F4FA8" stroke-width="1.4" stroke-dasharray="6 4"/>
-            <g stroke="#1B1F2A" stroke-width="1.4" fill="#fff"><rect x="58" y="190" width="120" height="50"/><rect x="200" y="190" width="120" height="50"/><rect x="342" y="190" width="120" height="50"/></g>
+            <rect x="170" y="18" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="43" text-anchor="middle">YOUR AI AGENT</text>
+            <line x1="260" y1="58" x2="260" y2="86" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
+            <rect x="120" y="88" width="280" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="108" text-anchor="middle" fill="#141414" font-weight="600">PiMoa</text><text x="260" y="124" text-anchor="middle" font-size="10.5">exact files · real line numbers</text>
+            <rect x="34" y="158" width="452" height="104" fill="none" stroke="#141414" stroke-width="1.4" stroke-dasharray="6 4"/>
+            <g stroke="#141414" stroke-width="1.4" fill="#fff"><rect x="58" y="190" width="120" height="50"/><rect x="200" y="190" width="120" height="50"/><rect x="342" y="190" width="120" height="50"/></g>
             <text x="118" y="212" text-anchor="middle">MODEL A</text><text x="260" y="212" text-anchor="middle">MODEL B</text><text x="402" y="212" text-anchor="middle">MODEL C</text>
-            <text x="118" y="228" text-anchor="middle" font-size="10" fill="#5A6070">blind</text><text x="260" y="228" text-anchor="middle" font-size="10" fill="#5A6070">blind</text><text x="402" y="228" text-anchor="middle" font-size="10" fill="#5A6070">blind</text>
-            <g stroke="#1B1F2A" stroke-width="1.3"><line x1="200" y1="132" x2="118" y2="188" marker-end="url(#a3)"/><line x1="260" y1="132" x2="260" y2="188" marker-end="url(#a3)"/><line x1="320" y1="132" x2="402" y2="188" marker-end="url(#a3)"/>
+            <text x="118" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text><text x="260" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text><text x="402" y="228" text-anchor="middle" font-size="10" fill="#6B6660">blind</text>
+            <g stroke="#141414" stroke-width="1.3"><line x1="200" y1="132" x2="118" y2="188" marker-end="url(#a3)"/><line x1="260" y1="132" x2="260" y2="188" marker-end="url(#a3)"/><line x1="320" y1="132" x2="402" y2="188" marker-end="url(#a3)"/>
             <line x1="118" y1="240" x2="230" y2="290" marker-end="url(#a3)"/><line x1="260" y1="240" x2="260" y2="288" marker-end="url(#a3)"/><line x1="402" y1="240" x2="290" y2="290" marker-end="url(#a3)"/></g>
-            <rect x="170" y="290" width="180" height="40" fill="none" stroke="#1B1F2A" stroke-width="1.6"/><text x="260" y="315" text-anchor="middle">AGGREGATOR</text>
-            <line x1="260" y1="330" x2="260" y2="356" stroke="#1B1F2A" stroke-width="1.4" marker-end="url(#a3)"/>
-            <rect x="150" y="358" width="220" height="44" fill="#E3EAF7" stroke="#1F4FA8" stroke-width="1.6"/><text x="260" y="378" text-anchor="middle" fill="#1F4FA8" font-weight="600">JEV JUDGE</text><text x="260" y="394" text-anchor="middle" font-size="10.5">p = calibrated probability</text>
-            <line x1="200" y1="402" x2="120" y2="430" stroke="#1B1F2A" stroke-width="1.3" marker-end="url(#a3)"/><line x1="320" y1="402" x2="400" y2="430" stroke="#1B1F2A" stroke-width="1.3" marker-end="url(#a3)"/>
-            <text x="110" y="448" text-anchor="middle">p ≥ 0.7</text><text x="110" y="463" text-anchor="middle" font-size="10.5" fill="#5A6070">verdict + file:line evidence</text>
-            <text x="410" y="448" text-anchor="middle" fill="#C2382C" font-weight="600">p &lt; 0.7</text><text x="410" y="463" text-anchor="middle" font-size="10.5" fill="#C2382C">a human looks</text>
-            <text x="44" y="173" font-size="10.5" fill="#1F4FA8" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">SANDBOX · read-only · no network · no keys</text>
+            <rect x="170" y="290" width="180" height="40" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="315" text-anchor="middle">AGGREGATOR</text>
+            <line x1="260" y1="330" x2="260" y2="356" stroke="#141414" stroke-width="1.4" marker-end="url(#a3)"/>
+            <rect x="150" y="358" width="220" height="44" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="378" text-anchor="middle" fill="#141414" font-weight="600">JEV JUDGE</text><text x="260" y="394" text-anchor="middle" font-size="10.5">p = calibrated probability</text>
+            <line x1="200" y1="402" x2="120" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/><line x1="320" y1="402" x2="400" y2="430" stroke="#141414" stroke-width="1.3" marker-end="url(#a3)"/>
+            <text x="110" y="448" text-anchor="middle">p ≥ 0.7</text><text x="110" y="463" text-anchor="middle" font-size="10.5" fill="#6B6660">verdict + file:line evidence</text>
+            <text x="410" y="448" text-anchor="middle" fill="#FF4F1F" font-weight="600">p &lt; 0.7</text><text x="410" y="463" text-anchor="middle" font-size="10.5" fill="#FF4F1F">a human looks</text>
+            <text x="44" y="173" font-size="10.5" fill="#141414" stroke="#fff" stroke-width="5" paint-order="stroke" stroke-linejoin="round">SANDBOX · read-only · no network · no keys</text>
           </svg>
           <figcaption><b>FIG 03.1</b> — Three blind reviewers in a sandbox, one aggregator, one calibrated judge. If any reviewer fails, the run fails.</figcaption>
         </figure>
@@ -303,7 +268,7 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 </section>
 
 <section class="frame sheet" id="made-for-the-daily-job">
-  <div class="strip"><span><b>Sheet 04</b> / 05</span><span>Made for the daily job</span><span>2025 – 2026</span></div>
+  <div class="strip"><span><b>No. 04</b> / 05</span><span>Made for the daily job</span><span>2025 – 2026</span></div>
   <div class="pad">
     <p class="made">Made for the daily job</p>
     <h2>Hands for the agent</h2>
@@ -327,23 +292,23 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
           <div class="row"><dt>Source</dt><dd>Sheet Shadow: public, MIT. The two gateways: not yet public — they bundle third-party engines whose licences I am still checking.</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 430" role="img" aria-label="Diagram: an AI agent reaches three doors: office-gateway routing to five Office engines, browser-gateway routing to four web engines, and Sheet Shadow, a hand built from scratch for editing existing workbooks" font-family="IBM Plex Mono, monospace" font-size="11.5">
-            <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1B1F2A"/></marker></defs>
+          <svg viewBox="0 0 520 430" role="img" aria-label="Diagram: an AI agent reaches three doors: office-gateway routing to five Office engines, browser-gateway routing to four web engines, and Sheet Shadow, a hand built from scratch for editing existing workbooks" font-family="Archivo, sans-serif" font-size="11.5">
+            <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="430" fill="#fff"/>
-            <rect x="180" y="16" width="160" height="38" fill="none" stroke="#1B1F2A" stroke-width="1.6"/><text x="260" y="40" text-anchor="middle">AI AGENT</text>
-            <g stroke="#1B1F2A" stroke-width="1.3"><line x1="220" y1="54" x2="90" y2="92" marker-end="url(#a4)"/><line x1="260" y1="54" x2="260" y2="92" marker-end="url(#a4)"/><line x1="300" y1="54" x2="430" y2="92" marker-end="url(#a4)"/></g>
-            <rect x="14" y="94" width="152" height="40" fill="#E3EAF7" stroke="#1F4FA8" stroke-width="1.6"/><text x="90" y="118" text-anchor="middle" fill="#1F4FA8" font-weight="600">office-gateway</text>
-            <rect x="184" y="94" width="152" height="40" fill="#E3EAF7" stroke="#1F4FA8" stroke-width="1.6"/><text x="260" y="118" text-anchor="middle" fill="#1F4FA8" font-weight="600">browser-gateway</text>
-            <rect x="354" y="94" width="152" height="40" fill="#fff" stroke="#C2382C" stroke-width="2"/><text x="430" y="113" text-anchor="middle" fill="#C2382C" font-weight="600">Sheet Shadow</text><text x="430" y="127" text-anchor="middle" font-size="9.5" fill="#C2382C">built from scratch</text>
-            <g font-size="10.5"><g fill="none" stroke="#1B1F2A" stroke-width="1"><rect x="14" y="156" width="152" height="30"/><rect x="14" y="192" width="152" height="30"/><rect x="14" y="228" width="152" height="30"/><rect x="14" y="264" width="152" height="30"/><rect x="14" y="300" width="152" height="30"/></g>
+            <rect x="180" y="16" width="160" height="38" fill="none" stroke="#141414" stroke-width="1.6"/><text x="260" y="40" text-anchor="middle">AI AGENT</text>
+            <g stroke="#141414" stroke-width="1.3"><line x1="220" y1="54" x2="90" y2="92" marker-end="url(#a4)"/><line x1="260" y1="54" x2="260" y2="92" marker-end="url(#a4)"/><line x1="300" y1="54" x2="430" y2="92" marker-end="url(#a4)"/></g>
+            <rect x="14" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="90" y="118" text-anchor="middle" fill="#141414" font-weight="600">office-gateway</text>
+            <rect x="184" y="94" width="152" height="40" fill="#ECE6DC" stroke="#141414" stroke-width="1.6"/><text x="260" y="118" text-anchor="middle" fill="#141414" font-weight="600">browser-gateway</text>
+            <rect x="354" y="94" width="152" height="40" fill="#fff" stroke="#FF4F1F" stroke-width="2"/><text x="430" y="113" text-anchor="middle" fill="#FF4F1F" font-weight="600">Sheet Shadow</text><text x="430" y="127" text-anchor="middle" font-size="9.5" fill="#FF4F1F">built from scratch</text>
+            <g font-size="10.5"><g fill="none" stroke="#141414" stroke-width="1"><rect x="14" y="156" width="152" height="30"/><rect x="14" y="192" width="152" height="30"/><rect x="14" y="228" width="152" height="30"/><rect x="14" y="264" width="152" height="30"/><rect x="14" y="300" width="152" height="30"/></g>
             <text x="90" y="175" text-anchor="middle">quick read / edit</text><text x="90" y="211" text-anchor="middle">formula engine</text><text x="90" y="247" text-anchor="middle">lossless repack</text><text x="90" y="283" text-anchor="middle">HTML → slides</text><text x="90" y="319" text-anchor="middle">XML → Word</text>
-            <g fill="none" stroke="#1B1F2A" stroke-width="1"><rect x="184" y="156" width="152" height="30"/><rect x="184" y="192" width="152" height="30"/><rect x="184" y="228" width="152" height="30"/><rect x="184" y="264" width="152" height="30"/></g>
+            <g fill="none" stroke="#141414" stroke-width="1"><rect x="184" y="156" width="152" height="30"/><rect x="184" y="192" width="152" height="30"/><rect x="184" y="228" width="152" height="30"/><rect x="184" y="264" width="152" height="30"/></g>
             <text x="260" y="175" text-anchor="middle">click &amp; type</text><text x="260" y="211" text-anchor="middle">145 site adapters</text><text x="260" y="247" text-anchor="middle">read-only diagnostics</text><text x="260" y="283" text-anchor="middle">custom scripts</text>
-            <g fill="none" stroke="#C2382C" stroke-width="1"><rect x="354" y="156" width="152" height="30"/><rect x="354" y="192" width="152" height="30"/><rect x="354" y="228" width="152" height="30"/><rect x="354" y="264" width="152" height="30"/></g>
+            <g fill="none" stroke="#FF4F1F" stroke-width="1"><rect x="354" y="156" width="152" height="30"/><rect x="354" y="192" width="152" height="30"/><rect x="354" y="228" width="152" height="30"/><rect x="354" y="264" width="152" height="30"/></g>
             <text x="430" y="175" text-anchor="middle">1 · shadow copy</text><text x="430" y="211" text-anchor="middle">2 · preview impact</text><text x="430" y="247" text-anchor="middle">3 · write changed parts</text><text x="430" y="283" text-anchor="middle">4 · final check</text></g>
-            <g stroke="#1B1F2A" stroke-width="1"><line x1="90" y1="134" x2="90" y2="154"/><line x1="260" y1="134" x2="260" y2="154"/></g><line x1="430" y1="134" x2="430" y2="154" stroke="#C2382C"/>
-            <line x1="14" y1="356" x2="506" y2="356" stroke="#1B1F2A" stroke-width=".8" stroke-dasharray="3 3"/>
-            <text x="20" y="378" font-size="10.5" fill="#5A6070">RULES, each learned from an incident:</text>
+            <g stroke="#141414" stroke-width="1"><line x1="90" y1="134" x2="90" y2="154"/><line x1="260" y1="134" x2="260" y2="154"/></g><line x1="430" y1="134" x2="430" y2="154" stroke="#FF4F1F"/>
+            <line x1="14" y1="356" x2="506" y2="356" stroke="#141414" stroke-width=".8" stroke-dasharray="3 3"/>
+            <text x="20" y="378" font-size="10.5" fill="#6B6660">RULES, each learned from an incident:</text>
             <text x="20" y="396" font-size="10.5">· a tool must describe itself truthfully</text>
             <text x="20" y="412" font-size="10.5">· a live browser is never shared · a workbook is saved to a new copy</text>
           </svg>
@@ -357,7 +322,7 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 </section>
 
 <section class="frame sheet" id="made-for-everyone">
-  <div class="strip"><span><b>Sheet 05</b> / 05</span><span>Made for everywhere and everyone</span><span>Oct 2026</span></div>
+  <div class="strip"><span><b>No. 05</b> / 05</span><span>Made for everywhere and everyone</span><span>Oct 2026</span></div>
   <div class="pad">
     <p class="made">Made for everywhere and everyone</p>
     <h2>Where should the tools live?</h2>
@@ -387,24 +352,24 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
           <div class="row"><dt>Licence</dt><dd>MIT</dd></div>
         </dl></div>
         <figure>
-          <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="IBM Plex Mono, monospace" font-size="11.5">
-            <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1B1F2A"/></marker></defs>
+          <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of four moves: A shared gateway on a Mac; B a cloud computer; C a public tunnel, removed; D a Cloudflare Worker serving ten assistants, with the Mac kept as a cold standby" font-family="Archivo, sans-serif" font-size="11.5">
+            <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#141414"/></marker></defs>
             <rect x="0" y="0" width="520" height="520" fill="#fff"/>
-            <g font-size="10.5" fill="#5A6070"><text x="80" y="10">REV A</text><text x="80" y="120">REV B</text><text x="80" y="230">REV C</text><text x="80" y="340">REV D</text></g>
-            <rect x="80" y="14" width="200" height="66" fill="none" stroke="#1B1F2A" stroke-width="1.6"/><text x="180" y="38" text-anchor="middle" font-weight="600">MAC · gateway</text><text x="180" y="56" text-anchor="middle" font-size="10.5">3 assistants share one pool</text><text x="180" y="71" text-anchor="middle" font-size="10.5" fill="#C2382C">256 → 10240 file handles</text>
-            <line x1="180" y1="80" x2="180" y2="122" stroke="#1B1F2A" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="124" width="200" height="66" fill="none" stroke="#1B1F2A" stroke-width="1.6"/><text x="180" y="148" text-anchor="middle" font-weight="600">CLOUD COMPUTER</text><text x="180" y="166" text-anchor="middle" font-size="10.5">works while the Mac sleeps</text><text x="180" y="181" text-anchor="middle" font-size="10.5">private network · access list</text>
-            <line x1="180" y1="190" x2="180" y2="232" stroke="#1B1F2A" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="234" width="200" height="66" fill="none" stroke="#C2382C" stroke-width="1.6" stroke-dasharray="6 4"/><text x="180" y="258" text-anchor="middle" font-weight="600" fill="#C2382C">PUBLIC TUNNEL</text><text x="180" y="276" text-anchor="middle" font-size="10.5" fill="#C2382C">never sleeps · ≈76 € / month</text>
-            <line x1="90" y1="240" x2="270" y2="294" stroke="#C2382C" stroke-width="1.4" opacity=".55"/><line x1="270" y1="240" x2="90" y2="294" stroke="#C2382C" stroke-width="1.4" opacity=".55"/>
-            <line x1="180" y1="300" x2="180" y2="342" stroke="#1B1F2A" stroke-width="1.4" marker-end="url(#a5)"/>
-            <rect x="80" y="344" width="200" height="74" fill="#E3EAF7" stroke="#1F4FA8" stroke-width="1.8"/><text x="180" y="368" text-anchor="middle" font-weight="600" fill="#1F4FA8">CLOUDFLARE WORKER</text><text x="180" y="386" text-anchor="middle" font-size="10.5">free · 2 protocols · OAuth</text><text x="180" y="404" text-anchor="middle" font-size="10.5">11 endpoints · 347 tools</text>
-            <g stroke="#1F4FA8" stroke-width="1.2"><line x1="280" y1="372" x2="352" y2="330" marker-end="url(#a5)"/><line x1="280" y1="381" x2="352" y2="381" marker-end="url(#a5)"/><line x1="280" y1="390" x2="352" y2="432" marker-end="url(#a5)"/></g>
-            <g fill="none" stroke="#1B1F2A" stroke-width="1"><rect x="354" y="314" width="150" height="30"/><rect x="354" y="366" width="150" height="30"/><rect x="354" y="418" width="150" height="30"/></g>
+            <g font-size="10.5" fill="#6B6660"><text x="80" y="10">REV A</text><text x="80" y="120">REV B</text><text x="80" y="230">REV C</text><text x="80" y="340">REV D</text></g>
+            <rect x="80" y="14" width="200" height="66" fill="none" stroke="#141414" stroke-width="1.6"/><text x="180" y="38" text-anchor="middle" font-weight="600">MAC · gateway</text><text x="180" y="56" text-anchor="middle" font-size="10.5">3 assistants share one pool</text><text x="180" y="71" text-anchor="middle" font-size="10.5" fill="#FF4F1F">256 → 10240 file handles</text>
+            <line x1="180" y1="80" x2="180" y2="122" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
+            <rect x="80" y="124" width="200" height="66" fill="none" stroke="#141414" stroke-width="1.6"/><text x="180" y="148" text-anchor="middle" font-weight="600">CLOUD COMPUTER</text><text x="180" y="166" text-anchor="middle" font-size="10.5">works while the Mac sleeps</text><text x="180" y="181" text-anchor="middle" font-size="10.5">private network · access list</text>
+            <line x1="180" y1="190" x2="180" y2="232" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
+            <rect x="80" y="234" width="200" height="66" fill="none" stroke="#FF4F1F" stroke-width="1.6" stroke-dasharray="6 4"/><text x="180" y="258" text-anchor="middle" font-weight="600" fill="#FF4F1F">PUBLIC TUNNEL</text><text x="180" y="276" text-anchor="middle" font-size="10.5" fill="#FF4F1F">never sleeps · ≈76 € / month</text>
+            <line x1="90" y1="240" x2="270" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/><line x1="270" y1="240" x2="90" y2="294" stroke="#FF4F1F" stroke-width="1.4" opacity=".55"/>
+            <line x1="180" y1="300" x2="180" y2="342" stroke="#141414" stroke-width="1.4" marker-end="url(#a5)"/>
+            <rect x="80" y="344" width="200" height="74" fill="#ECE6DC" stroke="#141414" stroke-width="1.8"/><text x="180" y="368" text-anchor="middle" font-weight="600" fill="#141414">CLOUDFLARE WORKER</text><text x="180" y="386" text-anchor="middle" font-size="10.5">free · 2 protocols · OAuth</text><text x="180" y="404" text-anchor="middle" font-size="10.5">11 endpoints · 347 tools</text>
+            <g stroke="#141414" stroke-width="1.2"><line x1="280" y1="372" x2="352" y2="330" marker-end="url(#a5)"/><line x1="280" y1="381" x2="352" y2="381" marker-end="url(#a5)"/><line x1="280" y1="390" x2="352" y2="432" marker-end="url(#a5)"/></g>
+            <g fill="none" stroke="#141414" stroke-width="1"><rect x="354" y="314" width="150" height="30"/><rect x="354" y="366" width="150" height="30"/><rect x="354" y="418" width="150" height="30"/></g>
             <g font-size="10.5" text-anchor="middle"><text x="429" y="333">assistants on Mac</text><text x="429" y="385">assistants in cloud</text><text x="429" y="437">other companies’ AIs</text></g>
-            <text x="429" y="466" text-anchor="middle" font-size="10.5" fill="#1F4FA8" font-weight="600">10 AI assistants</text>
-            <path d="M80,47 C14,47 14,381 78,381" fill="none" stroke="#1F4FA8" stroke-width="1.1" stroke-dasharray="4 4"/>
-            <text x="28" y="470" font-size="10.5" fill="#1F4FA8">Mac gateway kept</text><text x="28" y="485" font-size="10.5" fill="#1F4FA8">as a cold standby</text>
+            <text x="429" y="466" text-anchor="middle" font-size="10.5" fill="#141414" font-weight="600">10 AI assistants</text>
+            <path d="M80,47 C14,47 14,381 78,381" fill="none" stroke="#141414" stroke-width="1.1" stroke-dasharray="4 4"/>
+            <text x="28" y="470" font-size="10.5" fill="#141414">Mac gateway kept</text><text x="28" y="485" font-size="10.5" fill="#141414">as a cold standby</text>
           </svg>
           <figcaption><b>FIG 05.1</b> — Four moves, each forced by a specific failure. Nothing that still works was thrown away.</figcaption>
         </figure>
@@ -422,13 +387,13 @@ footer{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:ce
 </section>
 
 <section class="frame notes" id="notes">
-  <div class="strip"><span><b>General notes</b></span><span>Apply to all sheets</span><span>What I keep relearning</span></div>
+  <div class="strip"><span><b>General notes</b></span><span>Across all five</span><span>What I keep relearning</span></div>
   <div class="pad">
     <ol>
-      <li><span class="t">Build for the person next to you.</span><span class="see">SHEETS 01 · 02</span></li>
-      <li><span class="t">Measure before you argue.</span><span class="see">SHEET 03</span></li>
-      <li><span class="t">Fail closed: no answer beats a confident half-answer.</span><span class="see">SHEETS 03 · 04</span></li>
-      <li><span class="t">Write the failures down — and delete what doesn’t earn its keep.</span><span class="see">THE RED STAMPS</span></li>
+      <li><span class="t">Build for the person next to you.</span><span class="see">No. 01 · 02</span></li>
+      <li><span class="t">Measure before you argue.</span><span class="see">No. 03</span></li>
+      <li><span class="t">Fail closed: no answer beats a confident half-answer.</span><span class="see">No. 03 · 04</span></li>
+      <li><span class="t">Write the failures down — and delete what doesn’t earn its keep.</span><span class="see">Every “failed” and “deleted”</span></li>
     </ol>
   </div>
 </section>
